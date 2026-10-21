@@ -1,0 +1,13 @@
+{
+  "source": "data\\revision_20261020_metadata\\sentences.jsonl",
+  "excluded_train_rows": 11,
+  "exclusion_rule": "Training rows already marked NEEDS_DISCUSSION or SOURCE_CHECK; no labels changed",
+  "training_counts": {
+    "FACT": 174,
+    "ISSUE": 17,
+    "OTHER": 2,
+    "RULING": 196
+  },
+  "validation_and_test_unchanged": true,
+  "bicol_case_in_training": false
+}

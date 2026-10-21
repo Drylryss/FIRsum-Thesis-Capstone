@@ -1,0 +1,11 @@
+.venv/
+.cache/
+__pycache__/
+data/private/
+*.pyc
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key

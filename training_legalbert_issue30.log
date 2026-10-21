@@ -1,0 +1,66 @@
+Training loss weights: {'FACT': 1.0, 'ISSUE': 30.0, 'RULING': 1.0, 'OTHER': 1.0}
+C:\Users\drylr\OneDrive\Documents\Thesis Capstone\.venv\lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at nlpaueb/legal-bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Map:   0%|          | 0/381 [00:00<?, ? examples/s]
+Map: 100%|##########| 381/381 [00:00<00:00, 6967.31 examples/s]
+
+Map:   0%|          | 0/112 [00:00<?, ? examples/s]
+Map: 100%|##########| 112/112 [00:00<00:00, 15510.86 examples/s]
+{'loss': 0.7634, 'grad_norm': 24.38336181640625, 'learning_rate': 9.652777777777779e-05, 'epoch': 0.20833333333333334}
+{'loss': 0.556, 'grad_norm': 7.535556793212891, 'learning_rate': 9.305555555555556e-05, 'epoch': 0.4166666666666667}
+{'loss': 1.0534, 'grad_norm': 22.133441925048828, 'learning_rate': 8.958333333333335e-05, 'epoch': 0.625}
+{'loss': 0.9542, 'grad_norm': 9.357441902160645, 'learning_rate': 8.611111111111112e-05, 'epoch': 0.8333333333333334}
+{'eval_loss': 0.551638662815094, 'eval_macro_f1': 0.44450280112044815, 'eval_accuracy': 0.875, 'eval_issue_precision': 0.0, 'eval_issue_recall': 0.0, 'eval_issue_f1': 0.0, 'eval_runtime': 12.7626, 'eval_samples_per_second': 8.776, 'eval_steps_per_second': 1.097, 'epoch': 1.0}
+C:\Users\drylr\OneDrive\Documents\Thesis Capstone\.venv\lib\site-packages\peft\utils\save_and_load.py:243: UserWarning: Could not find a config file in nlpaueb/legal-bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 0.3971, 'grad_norm': 23.242687225341797, 'learning_rate': 8.263888888888889e-05, 'epoch': 1.0416666666666667}
+{'loss': 0.7989, 'grad_norm': 9.557324409484863, 'learning_rate': 7.916666666666666e-05, 'epoch': 1.25}
+{'loss': 0.683, 'grad_norm': 3.8095178604125977, 'learning_rate': 7.569444444444445e-05, 'epoch': 1.4583333333333333}
+{'loss': 0.41, 'grad_norm': 0.6300541162490845, 'learning_rate': 7.222222222222222e-05, 'epoch': 1.6666666666666665}
+{'loss': 0.6533, 'grad_norm': 0.6686039566993713, 'learning_rate': 6.875e-05, 'epoch': 1.875}
+{'eval_loss': 0.5616819262504578, 'eval_macro_f1': 0.4441498762813715, 'eval_accuracy': 0.875, 'eval_issue_precision': 0.0, 'eval_issue_recall': 0.0, 'eval_issue_f1': 0.0, 'eval_runtime': 11.9043, 'eval_samples_per_second': 9.408, 'eval_steps_per_second': 1.176, 'epoch': 2.0}
+C:\Users\drylr\OneDrive\Documents\Thesis Capstone\.venv\lib\site-packages\peft\utils\save_and_load.py:243: UserWarning: Could not find a config file in nlpaueb/legal-bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 0.4335, 'grad_norm': 9.880901336669922, 'learning_rate': 6.527777777777778e-05, 'epoch': 2.0833333333333335}
+{'loss': 0.4575, 'grad_norm': 0.9074154496192932, 'learning_rate': 6.180555555555556e-05, 'epoch': 2.2916666666666665}
+{'loss': 0.7674, 'grad_norm': 23.699581146240234, 'learning_rate': 5.833333333333334e-05, 'epoch': 2.5}
+{'loss': 0.762, 'grad_norm': 6.657898902893066, 'learning_rate': 5.486111111111112e-05, 'epoch': 2.7083333333333335}
+{'loss': 0.5583, 'grad_norm': 0.16187748312950134, 'learning_rate': 5.138888888888889e-05, 'epoch': 2.9166666666666665}
+{'eval_loss': 0.5969420671463013, 'eval_macro_f1': 0.44884092725819347, 'eval_accuracy': 0.8839285714285714, 'eval_issue_precision': 0.0, 'eval_issue_recall': 0.0, 'eval_issue_f1': 0.0, 'eval_runtime': 12.0644, 'eval_samples_per_second': 9.284, 'eval_steps_per_second': 1.16, 'epoch': 3.0}
+C:\Users\drylr\OneDrive\Documents\Thesis Capstone\.venv\lib\site-packages\peft\utils\save_and_load.py:243: UserWarning: Could not find a config file in nlpaueb/legal-bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 0.3983, 'grad_norm': 23.36741828918457, 'learning_rate': 4.791666666666667e-05, 'epoch': 3.125}
+{'loss': 1.0267, 'grad_norm': 0.22273854911327362, 'learning_rate': 4.4444444444444447e-05, 'epoch': 3.3333333333333335}
+{'loss': 0.7303, 'grad_norm': 0.6049987077713013, 'learning_rate': 4.0972222222222225e-05, 'epoch': 3.5416666666666665}
+{'loss': 0.3901, 'grad_norm': 23.90155792236328, 'learning_rate': 3.7500000000000003e-05, 'epoch': 3.75}
+{'loss': 0.6425, 'grad_norm': 22.04230308532715, 'learning_rate': 3.402777777777778e-05, 'epoch': 3.9583333333333335}
+{'eval_loss': 0.6081088781356812, 'eval_macro_f1': 0.44884092725819347, 'eval_accuracy': 0.8839285714285714, 'eval_issue_precision': 0.0, 'eval_issue_recall': 0.0, 'eval_issue_f1': 0.0, 'eval_runtime': 13.7557, 'eval_samples_per_second': 8.142, 'eval_steps_per_second': 1.018, 'epoch': 4.0}
+C:\Users\drylr\OneDrive\Documents\Thesis Capstone\.venv\lib\site-packages\peft\utils\save_and_load.py:243: UserWarning: Could not find a config file in nlpaueb/legal-bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.8469, 'grad_norm': 0.12249324470758438, 'learning_rate': 3.055555555555556e-05, 'epoch': 4.166666666666667}
+{'loss': 0.0738, 'grad_norm': 0.33977505564689636, 'learning_rate': 2.7083333333333332e-05, 'epoch': 4.375}
+{'loss': 0.0464, 'grad_norm': 0.31524842977523804, 'learning_rate': 2.361111111111111e-05, 'epoch': 4.583333333333333}
+{'loss': 0.4444, 'grad_norm': 16.116352081298828, 'learning_rate': 2.013888888888889e-05, 'epoch': 4.791666666666667}
+{'loss': 0.7426, 'grad_norm': 32.639732360839844, 'learning_rate': 1.6666666666666667e-05, 'epoch': 5.0}
+{'eval_loss': 0.6193627119064331, 'eval_macro_f1': 0.45357142857142857, 'eval_accuracy': 0.8928571428571429, 'eval_issue_precision': 0.0, 'eval_issue_recall': 0.0, 'eval_issue_f1': 0.0, 'eval_runtime': 12.2082, 'eval_samples_per_second': 9.174, 'eval_steps_per_second': 1.147, 'epoch': 5.0}
+C:\Users\drylr\OneDrive\Documents\Thesis Capstone\.venv\lib\site-packages\peft\utils\save_and_load.py:243: UserWarning: Could not find a config file in nlpaueb/legal-bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 0.9743, 'grad_norm': 0.25211673974990845, 'learning_rate': 1.3194444444444446e-05, 'epoch': 5.208333333333333}
+{'loss': 1.1482, 'grad_norm': 0.12872889637947083, 'learning_rate': 9.722222222222223e-06, 'epoch': 5.416666666666667}
+{'loss': 0.3539, 'grad_norm': 0.24334685504436493, 'learning_rate': 6.25e-06, 'epoch': 5.625}
+{'loss': 0.4415, 'grad_norm': 0.15534768998622894, 'learning_rate': 2.777777777777778e-06, 'epoch': 5.833333333333333}
+C:\Users\drylr\OneDrive\Documents\Thesis Capstone\.venv\lib\site-packages\peft\utils\save_and_load.py:243: UserWarning: Could not find a config file in nlpaueb/legal-bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'eval_loss': 0.6143583655357361, 'eval_macro_f1': 0.44884092725819347, 'eval_accuracy': 0.8839285714285714, 'eval_issue_precision': 0.0, 'eval_issue_recall': 0.0, 'eval_issue_f1': 0.0, 'eval_runtime': 12.9878, 'eval_samples_per_second': 8.623, 'eval_steps_per_second': 1.078, 'epoch': 6.0}
+C:\Users\drylr\OneDrive\Documents\Thesis Capstone\.venv\lib\site-packages\peft\utils\save_and_load.py:243: UserWarning: Could not find a config file in nlpaueb/legal-bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'train_runtime': 302.151, 'train_samples_per_second': 7.566, 'train_steps_per_second': 0.953, 'train_loss': 0.6565263664556874, 'epoch': 6.0}
+C:\Users\drylr\OneDrive\Documents\Thesis Capstone\.venv\lib\site-packages\peft\utils\save_and_load.py:243: UserWarning: Could not find a config file in nlpaueb/legal-bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'eval_loss': 0.6193627119064331, 'eval_macro_f1': 0.45357142857142857, 'eval_accuracy': 0.8928571428571429, 'eval_issue_precision': 0.0, 'eval_issue_recall': 0.0, 'eval_issue_f1': 0.0, 'eval_runtime': 12.4593, 'eval_samples_per_second': 8.989, 'eval_steps_per_second': 1.124, 'epoch': 6.0}
+
+Map:   0%|          | 0/112 [00:00<?, ? examples/s]
+Map: 100%|##########| 112/112 [00:00<00:00, 2578.49 examples/s]

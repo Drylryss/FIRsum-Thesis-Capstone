@@ -1,0 +1,19 @@
+{
+  "split_counts": {
+    "train": 400,
+    "test": 58,
+    "validation": 112
+  },
+  "duplicate_text_count": 0,
+  "train_label_counts": {
+    "FACT": 174,
+    "ISSUE": 28,
+    "OTHER": 2,
+    "RULING": 196
+  },
+  "cases_by_split": {
+    "train": 9,
+    "validation": 2,
+    "test": 2
+  }
+}

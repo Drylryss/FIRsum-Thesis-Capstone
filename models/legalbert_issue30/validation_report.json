@@ -1,0 +1,86 @@
+{
+  "split": "validation",
+  "metrics": {
+    "test_loss": 0.6193627119064331,
+    "test_macro_f1": 0.45357142857142857,
+    "test_accuracy": 0.8928571428571429,
+    "test_issue_precision": 0.0,
+    "test_issue_recall": 0.0,
+    "test_issue_f1": 0.0,
+    "test_runtime": 13.0221,
+    "test_samples_per_second": 8.601,
+    "test_steps_per_second": 1.075
+  },
+  "classification_report": {
+    "FACT": {
+      "precision": 0.9473684210526315,
+      "recall": 0.8571428571428571,
+      "f1-score": 0.9,
+      "support": 42.0
+    },
+    "ISSUE": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 3.0
+    },
+    "RULING": {
+      "precision": 0.8648648648648649,
+      "recall": 0.9696969696969697,
+      "f1-score": 0.9142857142857143,
+      "support": 66.0
+    },
+    "OTHER": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "accuracy": 0.8928571428571429,
+    "macro avg": {
+      "precision": 0.4530583214793741,
+      "recall": 0.45670995670995673,
+      "f1-score": 0.45357142857142857,
+      "support": 112.0
+    },
+    "weighted avg": {
+      "precision": 0.8649156675472466,
+      "recall": 0.8928571428571429,
+      "f1-score": 0.8762755102040816,
+      "support": 112.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      36,
+      0,
+      6,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      0
+    ],
+    [
+      2,
+      0,
+      64,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "label_order": [
+    "FACT",
+    "ISSUE",
+    "RULING",
+    "OTHER"
+  ],
+  "annotation_status": "provisional"
+}

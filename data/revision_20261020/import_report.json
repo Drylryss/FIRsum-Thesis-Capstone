@@ -1,0 +1,59 @@
+{
+  "source": "C:\\Users\\drylr\\Downloads\\Consolidated Tagged Sentences File for LegalBERT.xlsx",
+  "source_sha256": "7f69b38c014cdc8769866fe86dfbd573f4e6a8ad935a54e67f4ce0f6191e290d",
+  "selected_rows": 551,
+  "labels": {
+    "FACT": 238,
+    "ISSUE": 16,
+    "OTHER": 3,
+    "RULING": 294
+  },
+  "identical_training_content_to": "data\\revision_20261019\\sentences.jsonl",
+  "case_provenance": "Exact unique text/label matches to prior dataset; original case splits preserved.",
+  "annotation_status": "Current workbook has suggested labels only. Final labels and review statuses are not supplied. Prior provisional status retained.",
+  "splits": {
+    "train": {
+      "sentences": 381,
+      "labels": {
+        "FACT": 174,
+        "ISSUE": 9,
+        "OTHER": 2,
+        "RULING": 196
+      },
+      "cases": [
+        "GR142381_20031015",
+        "GR111238_19950125",
+        "GRL12219_19180315",
+        "GRL74027_19891207",
+        "GR159097_20100705",
+        "GRL29330_19871214"
+      ]
+    },
+    "validation": {
+      "sentences": 112,
+      "labels": {
+        "FACT": 42,
+        "ISSUE": 3,
+        "OTHER": 1,
+        "RULING": 66
+      },
+      "cases": [
+        "GR107112_19940224",
+        "GR88880_19910430"
+      ]
+    },
+    "test": {
+      "sentences": 58,
+      "labels": {
+        "FACT": 22,
+        "ISSUE": 4,
+        "RULING": 32
+      },
+      "cases": [
+        "GR149420",
+        "GR104234_19950630"
+      ]
+    }
+  },
+  "training_decision": "No repeated training: all texts, labels, cases, and splits match the previous experiment."
+}

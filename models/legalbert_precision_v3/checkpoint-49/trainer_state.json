@@ -1,0 +1,74 @@
+{
+  "best_metric": 0.5659634317862166,
+  "best_model_checkpoint": "models/legalbert_precision_v3\\checkpoint-49",
+  "epoch": 1.0,
+  "eval_steps": 500,
+  "global_step": 49,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 0.20408163265306123,
+      "grad_norm": 0.011136318556964397,
+      "learning_rate": 1.25e-05,
+      "loss": 0.0017,
+      "step": 10
+    },
+    {
+      "epoch": 0.40816326530612246,
+      "grad_norm": 0.2581300139427185,
+      "learning_rate": 2.5e-05,
+      "loss": 0.2106,
+      "step": 20
+    },
+    {
+      "epoch": 0.6122448979591837,
+      "grad_norm": 0.03868889436125755,
+      "learning_rate": 3.7500000000000003e-05,
+      "loss": 0.0017,
+      "step": 30
+    },
+    {
+      "epoch": 0.8163265306122449,
+      "grad_norm": 0.01935235969722271,
+      "learning_rate": 5e-05,
+      "loss": 0.3999,
+      "step": 40
+    },
+    {
+      "epoch": 1.0,
+      "eval_accuracy": 0.8928571428571429,
+      "eval_issue_f1": 0.4444444444444444,
+      "eval_issue_precision": 0.3333333333333333,
+      "eval_issue_recall": 0.6666666666666666,
+      "eval_loss": 1.2439870834350586,
+      "eval_macro_f1": 0.5659634317862166,
+      "eval_runtime": 16.2267,
+      "eval_samples_per_second": 6.902,
+      "eval_steps_per_second": 0.863,
+      "step": 49
+    }
+  ],
+  "logging_steps": 10,
+  "max_steps": 392,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 8,
+  "save_steps": 500,
+  "stateful_callbacks": {
+    "TrainerControl": {
+      "args": {
+        "should_epoch_stop": false,
+        "should_evaluate": false,
+        "should_log": false,
+        "should_save": true,
+        "should_training_stop": false
+      },
+      "attributes": {}
+    }
+  },
+  "total_flos": 9780997362720.0,
+  "train_batch_size": 8,
+  "trial_name": null,
+  "trial_params": null
+}

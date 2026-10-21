@@ -1,0 +1,95 @@
+{
+  "base_model": "nlpaueb/legal-bert-base-uncased",
+  "labels": [
+    "FACT",
+    "ISSUE",
+    "RULING",
+    "OTHER"
+  ],
+  "epochs": 16,
+  "seed": 42,
+  "class_weighting": "balanced",
+  "class_weights": {
+    "FACT": 0.5747126436781609,
+    "ISSUE": 3.5714285714285716,
+    "RULING": 0.5102040816326531,
+    "OTHER": 5.0
+  },
+  "issue_oversample_factor": 1,
+  "original_training_counts": {
+    "FACT": 174,
+    "ISSUE": 28,
+    "OTHER": 2,
+    "RULING": 196
+  },
+  "training_presentations_per_epoch": {
+    "FACT": 174,
+    "ISSUE": 28,
+    "OTHER": 2,
+    "RULING": 196
+  },
+  "init_adapter": null,
+  "learning_rate": 0.0002,
+  "warmup_ratio": 0.1,
+  "weight_decay": 0.01,
+  "adapter_config": {
+    "peft_type": "LORA",
+    "auto_mapping": null,
+    "base_model_name_or_path": "nlpaueb/legal-bert-base-uncased",
+    "revision": null,
+    "task_type": "SEQ_CLS",
+    "inference_mode": false,
+    "r": 16,
+    "target_modules": [
+      "key",
+      "query",
+      "value"
+    ],
+    "lora_alpha": 32,
+    "lora_dropout": 0.1,
+    "fan_in_fan_out": false,
+    "bias": "none",
+    "use_rslora": false,
+    "modules_to_save": [
+      "classifier",
+      "pooler",
+      "classifier",
+      "score"
+    ],
+    "init_lora_weights": true,
+    "layers_to_transform": null,
+    "layers_pattern": null,
+    "rank_pattern": {},
+    "alpha_pattern": {},
+    "megatron_config": null,
+    "megatron_core": "megatron.core",
+    "loftq_config": {},
+    "use_dora": false,
+    "layer_replication": null
+  },
+  "data_sha256": "352ce1abf7a325b77ab0d6c3b6da89d734986efc6e169767ab74091e49a5db7f",
+  "loss_normalization": "dataset",
+  "training_weight_mean": 0.7749999999999975,
+  "data_path": "data/revision_20261020_metadata/sentences.jsonl",
+  "max_class_weight": 5.0,
+  "issue_weight_multiplier": 1.0,
+  "best_checkpoint": "models/legalbert_balanced_v2\\checkpoint-550",
+  "best_validation_macro_f1": 0.5797908232118758,
+  "test_evaluated": false,
+  "train_cases": [
+    "GR111238_19950125",
+    "GR141877_20040813",
+    "GR142381_20031015",
+    "GR145441_20050426",
+    "GR159097_20100705",
+    "GR225562_20170308",
+    "GRL12219_19180315",
+    "GRL29330_19871214",
+    "GRL74027_19891207"
+  ],
+  "validation_cases": [
+    "GR107112_19940224",
+    "GR88880_19910430"
+  ],
+  "provisional_labels": true
+}

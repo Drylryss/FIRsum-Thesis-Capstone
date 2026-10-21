@@ -1,0 +1,27 @@
+{
+  "source": "Assistant review requested by user; pending expert confirmation",
+  "cases": {
+    "1a8672b962c0547abd45b79599dfd17a11603df8125a259e8af01d60c22f1f72": [
+      {
+        "text": "II This Court finds that the Court of Appeals erred in limiting prima facie evidence merely to the evidence presented by Naga City and respondents and in disregarding altogether petitioners' evidence, 80 which had the effect of squarely rebutting Naga City and respondents' assertions.",
+        "role": "RULING",
+        "reason": "Judicial finding or final disposition, not a question to be resolved."
+      },
+      {
+        "text": "85 The Court of Appeals, however, erred when it completely disregarded the evidence presented by petitioners, reasoning out that the question of whether or not Naga City's evidence should prevail over BMC's title over the property was supposedly a factual matter that should be threshed out in the trial court.",
+        "role": "RULING",
+        "reason": "Judicial finding or final disposition, not a question to be resolved."
+      },
+      {
+        "text": "86 By focusing solely on Naga City and respondents' evidence to determine if there was prima facie evidence to issue the writ of preliminary injunction while the case was being heard in the lower court, the Court of Appeals misappreciated the nature of a writ of preliminary injunction.",
+        "role": "RULING",
+        "reason": "Judicial finding or final disposition, not a question to be resolved."
+      },
+      {
+        "text": "The assailed February 28, 2014 Decision and August 26, 2014 Resolution of the Court of Appeals in CA-G.R. SP No. 129806 are REVERSED and SET ASIDE.",
+        "role": "RULING",
+        "reason": "Judicial finding or final disposition, not a question to be resolved."
+      }
+    ]
+  }
+}

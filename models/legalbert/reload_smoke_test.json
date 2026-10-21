@@ -1,0 +1,38 @@
+[
+  {
+    "sentence_id": "GR149420_S001",
+    "suggested_label": "FACT",
+    "predictions": [
+      {
+        "id": 1,
+        "text": "Respondent KJS ECO-FORMWORK System Phil., Inc. is a corporation engaged in the sale of steel scaffoldings, while petitioner Sonny L. Lo, doing business under the name and style San\u2019s Enterprises, is a building contractor.",
+        "role": "FACT",
+        "confidence": 0.9801
+      }
+    ]
+  },
+  {
+    "sentence_id": "GR149420_S002",
+    "suggested_label": "FACT",
+    "predictions": [
+      {
+        "id": 1,
+        "text": "On February 22, 1990, petitioner ordered scaffolding equipments from respondent worth \u20b1540,425.80.",
+        "role": "FACT",
+        "confidence": 0.9922
+      }
+    ]
+  },
+  {
+    "sentence_id": "GR149420_S003",
+    "suggested_label": "FACT",
+    "predictions": [
+      {
+        "id": 1,
+        "text": "He paid a downpayment in the amount of \u20b1150,000.00.",
+        "role": "FACT",
+        "confidence": 0.9912
+      }
+    ]
+  }
+]

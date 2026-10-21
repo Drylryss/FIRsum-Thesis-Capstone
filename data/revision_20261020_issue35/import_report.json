@@ -1,0 +1,37 @@
+{
+  "source": "C:\\Users\\drylr\\Downloads\\Consolidated Tagged Sentences File for LegalBERT.xlsx",
+  "sha256": "f817b20b3e6ec7b8fe2de0e3cf31fc585c46047a53a4f8985ab0d8d1c8165c90",
+  "rows": 570,
+  "added": 19,
+  "split_assignment": "User explicitly requested new rows for training; previous case splits preserved.",
+  "case_sources": [
+    "https://lawphil.net/judjuris/juri1987/dec1987/gr_l-29330_1987.html",
+    "https://lawphil.net/judjuris/juri2017/mar2017/gr_225562_2017.html",
+    "https://lawphil.net/judjuris/juri2005/apr2005/gr_145441_2005.html",
+    "D:/Downloads/G.R. No. 141877.pdf"
+  ],
+  "splits": {
+    "train": {
+      "FACT": 174,
+      "ISSUE": 28,
+      "OTHER": 2,
+      "RULING": 196
+    },
+    "validation": {
+      "FACT": 42,
+      "ISSUE": 3,
+      "OTHER": 1,
+      "RULING": 66
+    },
+    "test": {
+      "FACT": 22,
+      "ISSUE": 4,
+      "RULING": 32
+    }
+  },
+  "limitations": [
+    "All labels provisional; 11 new rows flagged for discussion, including supporting arguments and historical assertions.",
+    "Three new cases contribute only ISSUE-selected examples; this is not full-case annotation.",
+    "No automatic relabeling or test-set evaluation."
+  ]
+}

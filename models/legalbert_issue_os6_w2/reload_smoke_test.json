@@ -1,0 +1,44 @@
+[
+  {
+    "sentence_id": "GR107112_19940224_R2_S009",
+    "suggested_label": "FACT",
+    "predictions": [
+      {
+        "id": 1,
+        "text": "The antecedent facts, as narrated by respondent Court of Appeals are, as follows: Petitioner Naga Telephone Co., Inc. (NATELCO) is a telephone company rendering local as well as long distance service in Naga City while private respondent Camarines Sur II Electric Cooperative, Inc. (CASURECO II) is a private corporation established for the purpose of operating an electric power service in the same city.",
+        "role": "FACT",
+        "confidence": 0.631
+      }
+    ]
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S010",
+    "suggested_label": "FACT",
+    "predictions": [
+      {
+        "id": 1,
+        "text": "On November 1, 1977, the parties entered into a contract (Exh.",
+        "role": "FACT",
+        "confidence": 0.706
+      },
+      {
+        "id": 2,
+        "text": "\"A\") for the use by petitioners in the operation of its telephone service the electric light posts of private respondent in Naga City.",
+        "role": "FACT",
+        "confidence": 0.7574
+      }
+    ]
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S011",
+    "suggested_label": "FACT",
+    "predictions": [
+      {
+        "id": 1,
+        "text": "In consideration therefor, petitioners agreed to install, free of charge, ten (10) telephone connections for the use by private respondent in the following places: \"(a) 3 units - The Main Office of (private respondent); (b) 2 Units - The Warehouse of (private respondent); (c) 1 Unit - The Sub-Station of (private respondent) at Concepcion Peque\u00f1a; (d) 1 Unit - The Residence of (private respondent's) President; (e) 1 Unit - The Residence of (private respondent's) Acting General Manager; & (f) 2 Units - To be determined by the General Manager.",
+        "role": "FACT",
+        "confidence": 0.527
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "source": "C:\\Users\\drylr\\Downloads\\Case Input  (1).pdf",
+  "sha256": "8ee55d99e3c2cf0220a3476ea624b8ae0488cfb502085f874dc850042f0fce54",
+  "matches_saved_test": true,
+  "sentences": 140,
+  "labels": {
+    "RULING": 60,
+    "FACT": 64,
+    "ISSUE": 16
+  },
+  "chunks": {
+    "FACT": 3,
+    "ISSUE": 1,
+    "RULING": 3
+  },
+  "main_issue": [
+    {
+      "id": 63,
+      "text": "59 The single issue to be resolved by this Court is whether or not the Court of Appeals erred in directing the Regional Trial Court to issue a writ of preliminary injunction on the closure of Road Lot No. 3.",
+      "role": "ISSUE",
+      "confidence": 0.9999
+    }
+  ],
+  "saved_result": "runs/bicol_cleaned_pipeline_result.json",
+  "new_inference_run": false
+}

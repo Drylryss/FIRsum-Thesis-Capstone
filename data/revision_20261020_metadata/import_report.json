@@ -1,0 +1,31 @@
+{
+  "source": "C:\\Users\\drylr\\Downloads\\Consolidated Tagged Sentences File for LegalBERT.xlsx",
+  "sha256": "1b7cebb67b2c5221ce0f7f6a244368e9f33c1dbb01b0c170edb46dbe385c36d5",
+  "selected_rows": 570,
+  "metadata_matched_rows": 570,
+  "training_content_identical_to": "data\\revision_20261020_issue35\\sentences.jsonl",
+  "repeated_sheet3_rows_not_added": 19,
+  "reserve_marked_rows_using_prior_user_train_authorization": 18,
+  "splits": {
+    "train": {
+      "FACT": 174,
+      "ISSUE": 28,
+      "OTHER": 2,
+      "RULING": 196
+    },
+    "validation": {
+      "FACT": 42,
+      "ISSUE": 3,
+      "OTHER": 1,
+      "RULING": 66
+    },
+    "test": {
+      "FACT": 22,
+      "ISSUE": 4,
+      "RULING": 32
+    }
+  },
+  "training_action": "No retraining; model inputs and labels identical to completed legalbert_issue35 run.",
+  "id_policy": "Retained dataset IDs; workbook IDs recorded separately to avoid collisions with earlier annotation revisions.",
+  "annotation_status": "Provisional; no supplied final labels."
+}

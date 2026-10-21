@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FIRmSUM · Decision workspace</title>
+<style>
+:root{font-family:Inter,Segoe UI,sans-serif;color:#182b31;background:#f2f4f0}*{box-sizing:border-box}body{margin:0}header{background:#173c3d;color:white;padding:28px 5%;display:flex;justify-content:space-between;align-items:center}header b{font-family:Georgia,serif;font-size:30px}header small{color:#c8dbcb}main{max-width:1300px;margin:36px auto;padding:0 24px}h1{font-family:Georgia,serif;font-size:36px;font-weight:normal;margin-bottom:10px}p{line-height:1.6;color:#526367}.grid{display:grid;grid-template-columns:1fr 1.2fr;gap:24px}.card{background:white;border:1px solid #d9e1da;border-radius:14px;padding:25px;margin-bottom:20px}label{display:block;font-weight:600;margin:16px 0 8px}input,textarea,select{width:100%;border:1px solid #bacbc4;border-radius:7px;padding:12px;font:inherit}textarea{resize:vertical;line-height:1.6}button{border:0;border-radius:7px;padding:13px 20px;background:#245c51;color:white;font:inherit;cursor:pointer;margin-top:15px}button:disabled{opacity:.5;cursor:wait}.secondary{background:#e4ece6;color:#214c41}#status{font-size:14px}#notice{white-space:pre-wrap;color:#7c421d;line-height:1.5}.tag{font-size:12px;letter-spacing:2px;color:#416b58}.block{border-top:1px solid #e1e6df;margin-top:20px;padding-top:20px}.block h3{font-family:Georgia,serif;font-size:23px;margin:6px 0}summary{cursor:pointer;color:#3d6657;margin-top:10px}li{line-height:1.6;margin:10px 0}.empty{padding:65px 20px;text-align:center;color:#71817c}footer{font-size:13px;color:#627570;padding:16px 0 35px}@media(max-width:800px){.grid{grid-template-columns:1fr}header{display:block}h1{font-size:30px}}
+.stages{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.stage{background:#e4ece6;color:#214c41;flex:1;padding:12px 8px}.stage.active{background:#245c51;color:white}.stage-panel[hidden]{display:none}.stage-panel>h3{font-size:24px;font-family:Georgia,serif}.table-wrap{overflow:auto;max-height:560px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;vertical-align:top;padding:12px 8px;border-bottom:1px solid #dfe6e0}th{position:sticky;top:0;background:#edf3ee}td.sentence{min-width:220px;line-height:1.6}#bert-output select{min-width:125px}#bert-output td small{display:block;margin-top:6px}.role{font-size:12px;font-weight:bold;white-space:nowrap}.model-text{white-space:pre-wrap;line-height:1.7;color:#233d36}.counts{line-height:1.7;background:#edf3ee;padding:12px;border-radius:6px}#digest-preview{margin-top:25px;padding:24px;background:#f6f5ef;border:1px solid #dedfd4;border-radius:8px}#digest-preview h2{font-family:Georgia,serif}#digest-preview p{white-space:pre-wrap;color:#243c35}
+</style></head><body><header><b>FIRmSUM<span style="color:#a9c8a8">.</span></b><small>PHILIPPINE JURISPRUDENCE / RESEARCH WORKSPACE</small></header><main><span class="tag">FROM DECISION TO STRUCTURED DIGEST</span><h1>Find the facts. Follow the reasoning.</h1><p>Generate a Facts–Issue–Ruling draft from a complete Supreme Court ponencia on Obligations and Contracts.</p><div class="grid"><section><form id="form" class="card"><h2>01 / Source decision</h2><div id="status" role="status">Checking model readiness…</div><label for="file">Upload full case PDF</label><input id="file" name="file" type="file" accept=".pdf,application/pdf" required><p>Upload a readable full-case PDF with selectable text (maximum 10 MB). The PDF filename will identify your output. Scanned PDFs need OCR first.</p><p>Include the complete main decision (majority ponencia). The app checks for the main decision and signed ending. Review the extracted text and anything excluded before generating.</p><div id="source-review" hidden><h3>Review extracted decision</h3><p id="cleanup-summary"></p><label for="cleaned-source">Text that will be processed</label><textarea id="cleaned-source" rows="10" readonly></textarea><details><summary>View excluded material</summary><div id="excluded-source"></div></details><p id="cleanup-warnings"></p><label style="display:flex;gap:10px;align-items:flex-start"><input id="confirm-source" type="checkbox" required style="width:auto">I checked that the main decision and final ruling are retained.</label></div><button id="generate" disabled>Generate FIR draft →</button><p id="notice" role="status" aria-live="polite"></p></form><div class="card"><span class="tag">PIPELINE</span><p>Sentence segmentation → LegalBERT role classification → role clusters → LegalPegasus generation → attorney review.</p><p>The generator may omit or invent information. Compare each block with its source sentences before using it.</p></div></section><section class="card"><h2>Model outputs &amp; final digest</h2>
+<nav class="stages" aria-label="Pipeline output stages">
+<button type="button" class="stage active" data-panel="bert-panel" aria-pressed="true">1 · LegalBERT</button>
+<button type="button" class="stage" data-panel="pegasus-panel" aria-pressed="false">2 · LegalPegasus</button>
+<button type="button" class="stage" data-panel="final-panel" aria-pressed="false">3 · Final form</button>
+</nav>
+<section id="bert-panel" class="stage-panel"><h3>LegalBERT output</h3><p>Review each sentence role below. Correct a label, then regenerate to update the digest. Original model labels and confidence remain visible; reviewed labels have no model confidence. OTHER sentences are excluded from generation.</p><div id="bert-output" class="empty">Classified sentences will appear after a successful run.</div><button type="button" id="regenerate" disabled>Regenerate from corrected labels</button><button type="button" id="download-bert" class="secondary" disabled>Download LegalBERT output</button></section>
+<section id="pegasus-panel" class="stage-panel" hidden><h3>LegalPegasus output</h3><p>The generated paragraphs from the role clusters are preserved here. Review and edit your digest in Final form.</p><div id="pegasus-output" class="empty">Generated FIR blocks will appear after a successful run.</div><button type="button" id="download-pegasus" class="secondary" disabled>Download LegalPegasus output</button></section>
+<section id="final-panel" class="stage-panel" hidden><h3>Final form</h3><p>This assembles the three LegalPegasus paragraphs into one digest. Your edits update the preview below; the original model output stays available in stage 2.</p><div id="results"><div class="empty">The editable digest will appear after a successful run.</div></div><div id="review" hidden><label for="decision">Attorney review outcome</label><select id="decision"><option value="pending">Pending review</option><option value="accept">Accept</option><option value="edit">Edit</option><option value="reject">Reject — regenerate after correction</option></select><label for="reason">Review notes / reason code</label><textarea id="reason" rows="3" placeholder="Factual error, missing party, incorrect legal basis, hallucinated content, structural non-conformity…"></textarea><p>Edits and review notes are included in your download. Export to retain them; this workspace does not save them on the server.</p><button type="button" id="download">Download reviewed JSON</button><button type="button" class="secondary" id="copy">Copy digest</button></div><article id="digest-preview" hidden aria-label="Final digest preview"></article></section></section></div><footer>FIRmSUM · Thesis prototype · Generated text is pending expert validation.</footer></main>
+<script>
+let result = null;
+const $ = id => document.getElementById(id);
+const names = {FACT: 'Facts', ISSUE: 'Issue', RULING: 'Ruling'};
+function showPanel(id) {
+  document.querySelectorAll('.stage-panel').forEach(p => p.hidden = p.id !== id);
+  document.querySelectorAll('.stage').forEach(b => {
+    const selected = b.dataset.panel === id;
+    b.classList.toggle('active', selected);
+    b.setAttribute('aria-pressed', String(selected));
+  });
+}
+document.querySelectorAll('.stage').forEach(b => b.onclick = () => showPanel(b.dataset.panel));
+function node(tag, text, className) {
+  const el = document.createElement(tag);
+  if (text !== undefined) el.textContent = text;
+  if (className) el.className = className;
+  return el;
+}
+function saveJSON(payload, filename) {
+  const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'}));
+  const a = document.createElement('a'); a.href = url; a.download = filename; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+function finalBlocks() {
+  return Object.fromEntries(Object.keys(names).map(r => [r, $('block-' + r).value]));
+}
+function preview() {
+  if (!result) return;
+  const target = $('digest-preview'); target.replaceChildren(); target.hidden = false;
+  target.append(node('span', 'FINAL DIGEST · ' + $('decision').selectedOptions[0].textContent, 'tag'));
+  target.append(node('h2', result.case_id));
+  for (const [role, text] of Object.entries(finalBlocks())) {
+    target.append(node('h3', names[role]), node('p', text || 'No content available — review required.'));
+  }
+}
+function reviewed() {
+  return {...result, original_blocks: {...result.blocks}, blocks: finalBlocks(),
+    review_status: $('decision').value, review_notes: $('reason').value,
+    reviewed_at: new Date().toISOString()};
+}
+function renderOutputs(body) {
+  const bert = $('bert-output'); bert.replaceChildren(); bert.className = '';
+  const counts = Object.fromEntries(['FACT','ISSUE','RULING','OTHER'].map(r => [r, body.sentences.filter(s => s.role === r).length]));
+  bert.append(node('p', Object.entries(counts).map(([r,n]) => r + ': ' + n).join(' · '), 'counts'));
+  const table = node('table'), head = node('thead'), tr = node('tr');
+  for (const text of ['#', 'Source sentence', 'Reviewed role', 'Model prediction']) tr.append(node('th', text));
+  head.append(tr); table.append(head); const tbody = node('tbody');
+  for (const s of body.sentences) {
+    const row = node('tr');
+    const roleCell = node('td'), select = node('select'); select.setAttribute('aria-label', 'Role for sentence ' + s.id);
+    for (const role of ['FACT','ISSUE','RULING','OTHER']) { const option = node('option', role); option.value = role; select.append(option); }
+    select.value = s.role; roleCell.append(select);
+    const modelRole = s.model_role || s.role, modelConfidence = s.model_confidence ?? s.confidence;
+    if (s.label_source) roleCell.append(node('small', s.label_source === 'assistant_review' ? 'Assistant correction · verify' : 'User correction'));
+    select.onchange = () => {
+      s.model_role = modelRole; s.model_confidence = modelConfidence;
+      s.role = select.value; s.confidence = null; s.label_source = 'user_review'; s.correction_reason = 'Label changed in workspace';
+      $('regenerate').disabled = false; $('download-pegasus').disabled = true;
+      $('review').hidden = true; $('digest-preview').hidden = true;
+      for (const id of ['pegasus-output','results']) $(id).replaceChildren(node('p', 'Labels changed. Regenerate to update this output.', 'empty'));
+      bert.querySelector('.counts').textContent = ['FACT','ISSUE','RULING','OTHER'].map(role => role + ': ' + body.sentences.filter(x => x.role === role).length).join(' · ');
+      $('notice').textContent = 'Sentence labels changed. Regenerate to update LegalPegasus and the final form.';
+    };
+    row.append(node('td', String(s.id)), node('td', s.text, 'sentence'), roleCell,
+      node('td', modelRole + ' · ' + (modelConfidence == null ? 'Not available' : (modelConfidence * 100).toFixed(1) + '%')));
+    tbody.append(row);
+  }
+  table.append(tbody); const wrap = node('div', undefined, 'table-wrap'); wrap.append(table); bert.append(wrap);
+  const pegasus = $('pegasus-output'); pegasus.replaceChildren(); pegasus.className = '';
+  $('results').replaceChildren();
+  for (const role of Object.keys(names)) {
+    const raw = node('div', undefined, 'block');
+    raw.append(node('h3', names[role]), node('p', body.blocks[role] || 'No source sentences detected for this role.', 'model-text'));
+    raw.append(node('small', 'Source chunks: ' + (body.chunks[role] || 0)));
+    pegasus.append(raw);
+    const box = node('div', undefined, 'block');
+    const label = node('label', names[role]); label.htmlFor = 'block-' + role;
+    const edit = node('textarea'); edit.id = 'block-' + role; edit.rows = 6; edit.value = body.blocks[role]; edit.oninput = preview;
+    const details = node('details'), summary = node('summary', 'Compare with LegalBERT source sentences'), list = node('ol');
+    for (const s of body.sentences.filter(s => s.role === role)) list.append(node('li', '[' + s.id + '] ' + s.text));
+    details.append(summary, list); box.append(label, edit, details); $('results').append(box);
+  }
+  $('decision').value = 'pending'; $('reason').value = ''; $('review').hidden = false;
+  $('download-bert').disabled = false; $('download-pegasus').disabled = false;
+  $('regenerate').disabled = true; preview(); showPanel('bert-panel');
+}
+fetch('/api/status').then(r => r.json()).then(s => {
+  $('status').textContent = s.classifier_ready && s.ml_dependencies_ready
+    ? (s.classifier_provisional ? 'Provisional LegalBERT available · ' + (s.classifier_weighting === 'issue_focused' ? 'ISSUE-weighted training.' : s.classifier_weighting === 'balanced' ? 'Class-weighted training.' : 'Standard training.') : 'Classifier available · generation model loads on first request')
+    : 'Setup required · train the LegalBERT classifier before generating outputs.';
+}).catch(() => {$('status').textContent = 'Server unavailable. Start python inference.py.';});
+let sourceReady = false, previewVersion = 0;
+$('file').onchange = async () => {
+  const version = ++previewVersion;
+  sourceReady = false; result = null; $('regenerate').disabled = true;
+  $('source-review').hidden = true; $('confirm-source').checked = false; $('generate').disabled = true;
+  $('review').hidden = true; $('digest-preview').hidden = true;
+  $('download-bert').disabled = true; $('download-pegasus').disabled = true;
+  for (const id of ['bert-output','pegasus-output','results']) $(id).replaceChildren(node('p', 'Upload and review a decision to begin.', 'empty'));
+  const file = $('file').files[0];
+  if (!file) { $('notice').textContent = ''; return; }
+  $('notice').textContent = 'Extracting the PDF for review…';
+  try {
+    if (!file.name.toLowerCase().endsWith('.pdf')) throw Error('Upload a PDF file only.');
+    if (file.size > 10 * 1024 * 1024) throw Error('PDF exceeds 10 MB.');
+    const data = new FormData(); data.append('file', file);
+    const response = await fetch('/api/prepare', {method:'POST', body:data});
+    const body = await response.json();
+    if (version !== previewVersion) return;
+    if (!response.ok) throw Error(typeof body.detail === 'string' ? body.detail : JSON.stringify(body.detail));
+    $('cleaned-source').value = body.text;
+    $('cleanup-summary').textContent = body.raw_sentence_count + ' extracted sentence segments → ' + body.sentence_count + ' retained. ' + body.excluded_sections.length + ' sections excluded.';
+    $('excluded-source').replaceChildren();
+    for (const section of body.excluded_sections) {
+      $('excluded-source').append(node('h4', section.reason), node('p', section.text, 'model-text'));
+    }
+    if (!body.excluded_sections.length) $('excluded-source').append(node('p', 'Nothing was automatically excluded.'));
+    $('cleanup-warnings').textContent = body.warnings.join(' ');
+    $('source-review').hidden = false; sourceReady = true;
+    $('notice').textContent = 'Review the extracted decision, then check the box to enable generation.';
+  } catch (error) { if (version === previewVersion) $('notice').textContent = error.message; }
+};
+$('confirm-source').onchange = () => { $('generate').disabled = !sourceReady || !$('confirm-source').checked; };
+$('form').onsubmit = async e => {
+  e.preventDefault(); if (!sourceReady || !$('confirm-source').checked) return; $('generate').disabled = true; $('file').disabled = true; $('confirm-source').disabled = true; result = null;
+  $('review').hidden = true; $('digest-preview').hidden = true;
+  $('download-bert').disabled = true; $('download-pegasus').disabled = true;
+  for (const id of ['bert-output','pegasus-output','results']) $(id).replaceChildren(node('p', 'Waiting for a successful pipeline run…', 'empty'));
+  $('notice').textContent = 'Running LegalBERT → LegalPegasus → final form. First use may take several minutes.';
+  try {
+    const file = $('file').files[0];
+    if (!file || !file.name.toLowerCase().endsWith('.pdf')) throw Error('Upload a PDF file only.');
+    if (file.size > 10 * 1024 * 1024) throw Error('PDF exceeds 10 MB.');
+    const data = new FormData(); data.append('file', file);
+    const response = await fetch('/api/summarize', {method:'POST', body:data});
+    const body = await response.json();
+    if (!response.ok) throw Error(typeof body.detail === 'string' ? body.detail : JSON.stringify(body.detail));
+    result = body; renderOutputs(body); $('notice').textContent = body.warnings.join('\n');
+  } catch (error) {
+    $('notice').textContent = error.message;
+    for (const id of ['bert-output','pegasus-output','results']) $(id).replaceChildren(node('p', 'Pipeline stopped: ' + error.message, 'empty'));
+  } finally { $('file').disabled = false; $('confirm-source').disabled = false; $('generate').disabled = !sourceReady || !$('confirm-source').checked; }
+};
+$('regenerate').onclick = async () => {
+  if (!result) return;
+  const previous = result;
+  $('regenerate').disabled = true; $('generate').disabled = true; $('file').disabled = true; $('confirm-source').disabled = true;
+  document.querySelectorAll('#bert-output select').forEach(s => s.disabled = true);
+  $('notice').textContent = 'Regenerating LegalPegasus from corrected sentence roles…';
+  try {
+    const response = await fetch('/api/regenerate', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({case_id:previous.case_id, sentences:previous.sentences})});
+    const body = await response.json();
+    if (!response.ok) throw Error(typeof body.detail === 'string' ? body.detail : JSON.stringify(body.detail));
+    result = {...body, preprocessing:previous.preprocessing}; renderOutputs(result);
+    $('notice').textContent = result.warnings.join('\n');
+  } catch (error) { $('notice').textContent = error.message; $('regenerate').disabled = false; }
+  finally {
+    $('file').disabled = false; $('confirm-source').disabled = false; $('generate').disabled = !sourceReady || !$('confirm-source').checked;
+    document.querySelectorAll('#bert-output select').forEach(s => s.disabled = false);
+  }
+};
+$('decision').onchange = preview;
+$('download-bert').onclick = () => {if (result) saveJSON({case_id:result.case_id, model:'LegalBERT', sentences:result.sentences}, 'legalbert-output.json');};
+$('download-pegasus').onclick = () => {if (result) saveJSON({case_id:result.case_id, model:'LegalPegasus', blocks:result.blocks, chunks:result.chunks, exemplar_case_ids:result.exemplar_case_ids}, 'legalpegasus-output.json');};
+$('download').onclick = () => {if (result) saveJSON(reviewed(), 'fir-digest.json');};
+$('copy').onclick = async () => {
+  if (!result) return;
+  try {
+    await navigator.clipboard.writeText(result.case_id + '\n\n' + Object.entries(finalBlocks()).map(([r,t]) => names[r] + '\n' + t).join('\n\n'));
+    $('notice').textContent = 'Final digest copied.';
+  } catch { $('notice').textContent = 'Clipboard unavailable. Download the JSON instead.'; }
+};
+</script></body></html>

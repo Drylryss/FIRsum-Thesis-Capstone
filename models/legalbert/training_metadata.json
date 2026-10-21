@@ -1,0 +1,24 @@
+{
+  "base_model": "nlpaueb/legal-bert-base-uncased",
+  "labels": [
+    "FACT",
+    "ISSUE",
+    "RULING",
+    "OTHER"
+  ],
+  "epochs": 8,
+  "seed": 42,
+  "train_cases": [
+    "GR111238_19950125",
+    "GR142381_20031015",
+    "GR159097_20100705",
+    "GRL12219_19180315",
+    "GRL29330_19871214",
+    "GRL74027_19891207"
+  ],
+  "validation_cases": [
+    "GR107112_19940224",
+    "GR88880_19910430"
+  ],
+  "provisional_labels": true
+}

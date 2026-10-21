@@ -1,0 +1,187 @@
+{
+  "split": "validation",
+  "models": [
+    {
+      "model": "models/legalbert_balanced_v2",
+      "accuracy": 0.8928571428571429,
+      "macro_f1": 0.5797908232118758,
+      "per_label": {
+        "FACT": {
+          "precision": 0.9444444444444444,
+          "recall": 0.8095238095238095,
+          "f1-score": 0.8717948717948718,
+          "support": 42.0
+        },
+        "ISSUE": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1-score": 0.5,
+          "support": 3.0
+        },
+        "RULING": {
+          "precision": 0.9402985074626866,
+          "recall": 0.9545454545454546,
+          "f1-score": 0.9473684210526315,
+          "support": 66.0
+        },
+        "OTHER": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          34,
+          5,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          63,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "model": "models/legalbert_precision_v3",
+      "accuracy": 0.8928571428571429,
+      "macro_f1": 0.5659634317862166,
+      "per_label": {
+        "FACT": {
+          "precision": 0.9459459459459459,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8860759493670886,
+          "support": 42.0
+        },
+        "ISSUE": {
+          "precision": 0.3333333333333333,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.4444444444444444,
+          "support": 3.0
+        },
+        "RULING": {
+          "precision": 0.9130434782608695,
+          "recall": 0.9545454545454546,
+          "f1-score": 0.9333333333333333,
+          "support": 66.0
+        },
+        "OTHER": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          35,
+          3,
+          4,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          63,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "issue_errors": [
+    {
+      "sentence_id": "GR107112_19940224_R2_S009",
+      "case_id": "GR107112_19940224",
+      "text": "The antecedent facts, as narrated by respondent Court of Appeals are, as follows: Petitioner Naga Telephone Co., Inc. (NATELCO) is a telephone company rendering local as well as long distance service in Naga City while private respondent Camarines Sur II Electric Cooperative, Inc. (CASURECO II) is a private corporation established for the purpose of operating an electric power service in the same city.",
+      "reference_label": "FACT",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 0.1346038281917572,
+        "ISSUE": 0.8035607933998108,
+        "RULING": 0.03098459169268608,
+        "OTHER": 0.030850838869810104
+      }
+    },
+    {
+      "sentence_id": "GR107112_19940224_R2_S049",
+      "case_id": "GR107112_19940224",
+      "text": "Petitioners assert earnestly that Article 1267 of the New Civil Code is not applicable primarily because the contract does not involve the rendition of service or a personal prestation and it is not for future service with future unusual change.",
+      "reference_label": "FACT",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 0.0003516371361911297,
+        "ISSUE": 0.9995009899139404,
+        "RULING": 0.0001052514708135277,
+        "OTHER": 4.2164658225374296e-05
+      }
+    },
+    {
+      "sentence_id": "GR107112_19940224_R2_S098",
+      "case_id": "GR107112_19940224",
+      "text": "Defendant-appellant stresses that the applicability of said provision is a question of fact, and that it should have been given the opportunity to present evidence on said question.",
+      "reference_label": "FACT",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 0.0005958568071946502,
+        "ISSUE": 0.9993504881858826,
+        "RULING": 2.962051803478971e-05,
+        "OTHER": 2.3939137463457882e-05
+      }
+    },
+    {
+      "sentence_id": "GR88880_19910430_S016",
+      "case_id": "GR88880_19910430",
+      "text": "The assignments of error raised in PNB's petition for review can be resolved into a single legal issue of whether the bank, within the term of the loan which it granted to the private respondent, may unilaterally change or increase the interest rate stipulated therein at will and as often as it pleased.",
+      "reference_label": "ISSUE",
+      "predicted_label": "RULING",
+      "probabilities": {
+        "FACT": 4.3953736167168245e-05,
+        "ISSUE": 0.10718539357185364,
+        "RULING": 0.8919194936752319,
+        "OTHER": 0.0008511205087415874
+      }
+    },
+    {
+      "sentence_id": "GR107112_19940224_R2_S004",
+      "case_id": "GR107112_19940224",
+      "text": "However, it is submitted that when the service has become so difficult as to be manifestly beyond the contemplation of the parties, the court should be authorized to release the obligor in whole or in part.",
+      "reference_label": "RULING",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 0.09124062210321426,
+        "ISSUE": 0.9004276394844055,
+        "RULING": 0.004876051563769579,
+        "OTHER": 0.003455729689449072
+      }
+    }
+  ],
+  "note": "Provisional labels; only three validation ISSUE examples. No test evaluation."
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "model": "legalbert",
+    "accuracy": 0.8928571428571429,
+    "macro_f1": 0.45357142857142857,
+    "issue_precision": 0.0,
+    "issue_recall": 0.0,
+    "issue_f1": 0.0,
+    "issue_support": 3.0,
+    "weights": {
+      "FACT": 1,
+      "ISSUE": 1,
+      "RULING": 1,
+      "OTHER": 1
+    },
+    "normalization": "batch",
+    "test_evaluated_in_this_experiment": false
+  },
+  {
+    "model": "legalbert_weighted",
+    "accuracy": 0.8660714285714286,
+    "macro_f1": 0.4394952071057955,
+    "issue_precision": 0.0,
+    "issue_recall": 0.0,
+    "issue_f1": 0.0,
+    "issue_support": 3.0,
+    "weights": {
+      "FACT": 0.5474137931034483,
+      "ISSUE": 10.583333333333334,
+      "RULING": 0.48596938775510207,
+      "OTHER": 20.0
+    },
+    "normalization": "batch",
+    "test_evaluated_in_this_experiment": false
+  },
+  {
+    "model": "legalbert_issue30",
+    "accuracy": 0.8928571428571429,
+    "macro_f1": 0.45357142857142857,
+    "issue_precision": 0.0,
+    "issue_recall": 0.0,
+    "issue_f1": 0.0,
+    "issue_support": 3.0,
+    "weights": {
+      "FACT": 1.0,
+      "ISSUE": 30.0,
+      "RULING": 1.0,
+      "OTHER": 1.0
+    },
+    "normalization": "batch",
+    "test_evaluated_in_this_experiment": false
+  },
+  {
+    "model": "legalbert_issue30_global",
+    "accuracy": 0.8928571428571429,
+    "macro_f1": 0.45357142857142857,
+    "issue_precision": 0.0,
+    "issue_recall": 0.0,
+    "issue_f1": 0.0,
+    "issue_support": 3.0,
+    "weights": {
+      "FACT": 1.0,
+      "ISSUE": 30.0,
+      "RULING": 1.0,
+      "OTHER": 1.0
+    },
+    "normalization": "dataset",
+    "test_evaluated_in_this_experiment": false
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "split": "validation",
+  "models": [
+    {
+      "model": "models/legalbert",
+      "accuracy": 0.8928571428571429,
+      "macro_f1": 0.45357142857142857,
+      "per_label": {
+        "FACT": {
+          "precision": 0.9473684210526315,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.9,
+          "support": 42.0
+        },
+        "ISSUE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "RULING": {
+          "precision": 0.8648648648648649,
+          "recall": 0.9696969696969697,
+          "f1-score": 0.9142857142857143,
+          "support": 66.0
+        },
+        "OTHER": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          36,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          2,
+          0,
+          64,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "model": "models/legalbert_issue35",
+      "accuracy": 0.8928571428571429,
+      "macro_f1": 0.4532322137955941,
+      "per_label": {
+        "FACT": {
+          "precision": 0.9722222222222222,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8974358974358975,
+          "support": 42.0
+        },
+        "ISSUE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "RULING": {
+          "precision": 0.8552631578947368,
+          "recall": 0.9848484848484849,
+          "f1-score": 0.9154929577464789,
+          "support": 66.0
+        },
+        "OTHER": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          35,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          0,
+          65,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "issue_errors": [
+    {
+      "sentence_id": "GR107112_19940224_R2_S048",
+      "case_id": "GR107112_19940224",
+      "text": "Petitioners assign the following pertinent errors committed by respondent court: 1) in making a contract for the parties by invoking Article 1267 of the New Civil Code; 2) in ruling that prescription of the action for reformation of the contract in this case commenced from the time it became disadvantageous to private respondent; and 3) in ruling that the contract was subject to a potestative condition in favor of petitioners.",
+      "reference_label": "ISSUE",
+      "predicted_label": "RULING"
+    },
+    {
+      "sentence_id": "GR107112_19940224_R2_S086",
+      "case_id": "GR107112_19940224",
+      "text": "For basically, the main and pivotal issue in this case is whether the continued enforcement of the contract Exh. \"A\" between the parties has, through the years (since 1977), become too iniquitous or disadvantageous to the plaintiff and too one-sided in favor of defendant-appellant, so that a solution must be found to relieve plaintiff from the continued operation of said agreement and to prevent defendant-appellant from further unjustly enriching itself at plaintiff's expense.",
+      "reference_label": "ISSUE",
+      "predicted_label": "RULING"
+    },
+    {
+      "sentence_id": "GR88880_19910430_S016",
+      "case_id": "GR88880_19910430",
+      "text": "The assignments of error raised in PNB's petition for review can be resolved into a single legal issue of whether the bank, within the term of the loan which it granted to the private respondent, may unilaterally change or increase the interest rate stipulated therein at will and as often as it pleased.",
+      "reference_label": "ISSUE",
+      "predicted_label": "RULING"
+    }
+  ],
+  "note": "Provisional labels; only three validation ISSUE examples. No test evaluation."
+}

@@ -1,0 +1,200 @@
+{
+  "split": "validation",
+  "models": [
+    {
+      "model": "models/legalbert_issue35",
+      "accuracy": 0.8928571428571429,
+      "macro_f1": 0.4532322137955941,
+      "per_label": {
+        "FACT": {
+          "precision": 0.9722222222222222,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8974358974358975,
+          "support": 42.0
+        },
+        "ISSUE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "RULING": {
+          "precision": 0.8552631578947368,
+          "recall": 0.9848484848484849,
+          "f1-score": 0.9154929577464789,
+          "support": 66.0
+        },
+        "OTHER": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          35,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          0,
+          65,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "model": "models/legalbert_balanced_v2",
+      "accuracy": 0.8928571428571429,
+      "macro_f1": 0.5797908232118758,
+      "per_label": {
+        "FACT": {
+          "precision": 0.9444444444444444,
+          "recall": 0.8095238095238095,
+          "f1-score": 0.8717948717948718,
+          "support": 42.0
+        },
+        "ISSUE": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1-score": 0.5,
+          "support": 3.0
+        },
+        "RULING": {
+          "precision": 0.9402985074626866,
+          "recall": 0.9545454545454546,
+          "f1-score": 0.9473684210526315,
+          "support": 66.0
+        },
+        "OTHER": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          34,
+          5,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          63,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "issue_errors": [
+    {
+      "sentence_id": "GR107112_19940224_R2_S009",
+      "case_id": "GR107112_19940224",
+      "text": "The antecedent facts, as narrated by respondent Court of Appeals are, as follows: Petitioner Naga Telephone Co., Inc. (NATELCO) is a telephone company rendering local as well as long distance service in Naga City while private respondent Camarines Sur II Electric Cooperative, Inc. (CASURECO II) is a private corporation established for the purpose of operating an electric power service in the same city.",
+      "reference_label": "FACT",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 0.1170349270105362,
+        "ISSUE": 0.8633713126182556,
+        "RULING": 0.006421392783522606,
+        "OTHER": 0.0131723303347826
+      }
+    },
+    {
+      "sentence_id": "GR107112_19940224_R2_S018",
+      "case_id": "GR107112_19940224",
+      "text": "Petitioners further alleged that their utilization of private respondent's post could not have caused their deterioration because they have already been in use for eleven (11) years; and that the value of their expenses for the ten (10) telephone lines long enjoyed by private respondent free of charge are far in excess of the amounts claimed by the latter for the use of the posts, so that if there was any inequity, it was suffered by them.",
+      "reference_label": "FACT",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 0.273201048374176,
+        "ISSUE": 0.7265288829803467,
+        "RULING": 6.62199963699095e-05,
+        "OTHER": 0.00020376023894641548
+      }
+    },
+    {
+      "sentence_id": "GR107112_19940224_R2_S029",
+      "case_id": "GR107112_19940224",
+      "text": "With regard to the first cause of action: (a) Private respondent has the right under the contract to use ten (10) telephone units of petitioners for as long as it wishes without paying anything therefor except for long distance calls through PLDT out of which the latter get only 10% of the charges.",
+      "reference_label": "FACT",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 6.106538785388693e-05,
+        "ISSUE": 0.9452114701271057,
+        "RULING": 0.05419929698109627,
+        "OTHER": 0.0005282093770802021
+      }
+    },
+    {
+      "sentence_id": "GR107112_19940224_R2_S049",
+      "case_id": "GR107112_19940224",
+      "text": "Petitioners assert earnestly that Article 1267 of the New Civil Code is not applicable primarily because the contract does not involve the rendition of service or a personal prestation and it is not for future service with future unusual change.",
+      "reference_label": "FACT",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 0.00013559064245782793,
+        "ISSUE": 0.9997712969779968,
+        "RULING": 6.549741374328732e-05,
+        "OTHER": 2.7491532819112763e-05
+      }
+    },
+    {
+      "sentence_id": "GR107112_19940224_R2_S098",
+      "case_id": "GR107112_19940224",
+      "text": "Defendant-appellant stresses that the applicability of said provision is a question of fact, and that it should have been given the opportunity to present evidence on said question.",
+      "reference_label": "FACT",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 0.000343590130796656,
+        "ISSUE": 0.9996054768562317,
+        "RULING": 3.0156190405250527e-05,
+        "OTHER": 2.084058905893471e-05
+      }
+    },
+    {
+      "sentence_id": "GR107112_19940224_R2_S004",
+      "case_id": "GR107112_19940224",
+      "text": "However, it is submitted that when the service has become so difficult as to be manifestly beyond the contemplation of the parties, the court should be authorized to release the obligor in whole or in part.",
+      "reference_label": "RULING",
+      "predicted_label": "ISSUE",
+      "probabilities": {
+        "FACT": 0.011136595159769058,
+        "ISSUE": 0.9865998029708862,
+        "RULING": 0.0014049052260816097,
+        "OTHER": 0.0008587891352362931
+      }
+    }
+  ],
+  "note": "Provisional labels; only three validation ISSUE examples. No test evaluation."
+}

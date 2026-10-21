@@ -1,0 +1,97 @@
+{
+  "base_model": "nlpaueb/legal-bert-base-uncased",
+  "labels": [
+    "FACT",
+    "ISSUE",
+    "RULING",
+    "OTHER"
+  ],
+  "epochs": 8,
+  "seed": 42,
+  "class_weighting": "balanced",
+  "class_weights": {
+    "FACT": 0.5589080459770115,
+    "ISSUE": 1.7161764705882352,
+    "RULING": 0.4961734693877551,
+    "OTHER": 5.0
+  },
+  "issue_oversample_factor": 1,
+  "original_training_counts": {
+    "FACT": 174,
+    "ISSUE": 17,
+    "OTHER": 2,
+    "RULING": 196
+  },
+  "training_presentations_per_epoch": {
+    "FACT": 174,
+    "ISSUE": 17,
+    "OTHER": 2,
+    "RULING": 196
+  },
+  "init_adapter": "models/legalbert_balanced_v2",
+  "learning_rate": 5e-05,
+  "warmup_ratio": 0.1,
+  "weight_decay": 0.01,
+  "adapter_config": {
+    "peft_type": "LORA",
+    "auto_mapping": null,
+    "base_model_name_or_path": "nlpaueb/legal-bert-base-uncased",
+    "revision": null,
+    "task_type": "SEQ_CLS",
+    "inference_mode": false,
+    "r": 16,
+    "target_modules": [
+      "key",
+      "query",
+      "value"
+    ],
+    "lora_alpha": 32,
+    "lora_dropout": 0.1,
+    "fan_in_fan_out": false,
+    "bias": "none",
+    "use_rslora": false,
+    "modules_to_save": [
+      "classifier",
+      "pooler",
+      "classifier",
+      "score",
+      "classifier",
+      "score"
+    ],
+    "init_lora_weights": true,
+    "layers_to_transform": null,
+    "layers_pattern": null,
+    "rank_pattern": {},
+    "alpha_pattern": {},
+    "megatron_config": null,
+    "megatron_core": "megatron.core",
+    "loftq_config": {},
+    "use_dora": false,
+    "layer_replication": null
+  },
+  "data_sha256": "af25a6cbe82ca8d9c40ef3426fe072cba9d29fdc18ba98f1808df293cb7fc38b",
+  "loss_normalization": "dataset",
+  "training_weight_mean": 0.6007069408740292,
+  "data_path": "data/revision_20261021_filtered/sentences.jsonl",
+  "max_class_weight": 5.0,
+  "issue_weight_multiplier": 0.3,
+  "best_checkpoint": "models/legalbert_precision_v3\\checkpoint-49",
+  "best_validation_macro_f1": 0.5659634317862166,
+  "test_evaluated": false,
+  "train_cases": [
+    "GR111238_19950125",
+    "GR141877_20040813",
+    "GR142381_20031015",
+    "GR145441_20050426",
+    "GR159097_20100705",
+    "GR225562_20170308",
+    "GRL12219_19180315",
+    "GRL29330_19871214",
+    "GRL74027_19891207"
+  ],
+  "validation_cases": [
+    "GR107112_19940224",
+    "GR88880_19910430"
+  ],
+  "provisional_labels": true
+}

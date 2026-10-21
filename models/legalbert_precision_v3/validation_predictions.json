@@ -1,0 +1,1458 @@
+[
+  {
+    "sentence_id": "GR107112_19940224_R2_S009",
+    "case_id": "GR107112_19940224",
+    "text": "The antecedent facts, as narrated by respondent Court of Appeals are, as follows: Petitioner Naga Telephone Co., Inc. (NATELCO) is a telephone company rendering local as well as long distance service in Naga City while private respondent Camarines Sur II Electric Cooperative, Inc. (CASURECO II) is a private corporation established for the purpose of operating an electric power service in the same city.",
+    "reference_label": "FACT",
+    "predicted_label": "ISSUE",
+    "probabilities": {
+      "FACT": 0.1346038281917572,
+      "ISSUE": 0.8035607933998108,
+      "RULING": 0.03098459169268608,
+      "OTHER": 0.030850838869810104
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S010",
+    "case_id": "GR107112_19940224",
+    "text": "On November 1, 1977, the parties entered into a contract (Exh. \"A\") for the use by petitioners in the operation of its telephone service the electric light posts of private respondent in Naga City.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9998830556869507,
+      "ISSUE": 8.556107059121132e-05,
+      "RULING": 2.7866351501870668e-06,
+      "OTHER": 2.8615997507586144e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S011",
+    "case_id": "GR107112_19940224",
+    "text": "In consideration therefor, petitioners agreed to install, free of charge, ten (10) telephone connections for the use by private respondent in the following places: \"(a) 3 units - The Main Office of (private respondent); (b) 2 Units - The Warehouse of (private respondent); (c) 1 Unit - The Sub-Station of (private respondent) at Concepcion Peque\u00f1a; (d) 1 Unit - The Residence of (private respondent's) President; (e) 1 Unit - The Residence of (private respondent's) Acting General Manager; & (f) 2 Units - To be determined by the General Manager.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999295473098755,
+      "ISSUE": 3.760851905099116e-05,
+      "RULING": 1.3279608310767799e-06,
+      "OTHER": 3.143451249343343e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S013",
+    "case_id": "GR107112_19940224",
+    "text": "It was prepared by or with the assistance of the other petitioner, Atty. Luciano M. Maggay, then a member of the Board of Directors of private respondent and at the same time the legal counsel of petitioner.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999487400054932,
+      "ISSUE": 3.029495564987883e-05,
+      "RULING": 1.338715946985758e-06,
+      "OTHER": 1.961668203875888e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S014",
+    "case_id": "GR107112_19940224",
+    "text": "After the contract had been enforced for over ten (10) years, private respondent filed on January 2, 1989 with the Regional Trial Court of Naga City (Br. 28) C.C. No. 89-1642 against petitioners for reformation of the contract with damages, on the ground that it is too one-sided in favor of petitioners; that it is not in conformity with the guidelines of the National Electrification Administration (NEA) which direct that the reasonable compensation for the use of the posts is P10.00 per post, per month; that after eleven (11) years of petitioners' use of the posts, the telephone cables strung by them thereon have become much heavier with the increase in the volume of their subscribers, worsened by the fact that their linemen bore holes through the posts at which points those posts were broken during typhoons; that a post now costs as much as P2,630.00; so that justice and equity demand that the contract be reformed to abolish the inequities thereon.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9996453523635864,
+      "ISSUE": 0.0003343068528920412,
+      "RULING": 7.352954867201333e-07,
+      "OTHER": 1.9661329133668914e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S015",
+    "case_id": "GR107112_19940224",
+    "text": "As second cause of action, private respondent alleged that starting with the year 1981, petitioners have used 319 posts in the towns of Pili, Canaman, Magarao and Milaor, Camarines Sur, all outside Naga City, without any contract with it; that at the rate of P10.00 per post, petitioners should pay private respondent for the use thereof the total amount of P267,960.00 from 1981 up to the filing of its complaint; and that petitioners had refused to pay private respondent said amount despite demands.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9998273849487305,
+      "ISSUE": 0.00014255366113502532,
+      "RULING": 1.0638933645168436e-06,
+      "OTHER": 2.8928572646691464e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S016",
+    "case_id": "GR107112_19940224",
+    "text": "And as third cause of action, private respondent complained about the poor servicing by petitioners of the ten (10) telephone units which had caused it great inconvenience and damages to the tune of not less than P100,000.00.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9998892545700073,
+      "ISSUE": 9.787958697415888e-05,
+      "RULING": 7.088335109983745e-07,
+      "OTHER": 1.2177413736935705e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S018",
+    "case_id": "GR107112_19940224",
+    "text": "Petitioners further alleged that their utilization of private respondent's post could not have caused their deterioration because they have already been in use for eleven (11) years; and that the value of their expenses for the ten (10) telephone lines long enjoyed by private respondent free of charge are far in excess of the amounts claimed by the latter for the use of the posts, so that if there was any inequity, it was suffered by them.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9385654330253601,
+      "ISSUE": 0.06130782887339592,
+      "RULING": 1.3828954251948744e-05,
+      "OTHER": 0.0001129255470004864
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S019",
+    "case_id": "GR107112_19940224",
+    "text": "Regarding the second cause of action, petitioners claimed that private respondent had asked for telephone lines in areas outside Naga City for which its posts were used by them; and that if petitioners had refused to comply with private respondent's demands for payment for the use of the posts outside Naga City, it was probably because what is due to them from private respondent is more than its claim against them.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9994481205940247,
+      "ISSUE": 0.0005323325167410076,
+      "RULING": 1.306479134655092e-06,
+      "OTHER": 1.8248227206640877e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S020",
+    "case_id": "GR107112_19940224",
+    "text": "And with respect to the third cause of action, petitioners claimed, inter alia, that their telephone service had been categorized by the National Telecommunication Corporation (NTC) as \"very high\" and of \"superior quality.\"",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.999703586101532,
+      "ISSUE": 0.0002736029855441302,
+      "RULING": 1.062162027665181e-06,
+      "OTHER": 2.1695494069717824e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S021",
+    "case_id": "GR107112_19940224",
+    "text": "During the trial, private respondent presented the following witnesses: (1) Dioscoro Ragragio, one of the two officials who signed the contract in its behalf, declared that it was petitioner Maggay who prepared the contract; that the understanding between private respondent and petitioners was that the latter would only use the posts in Naga City because at that time, petitioners' capability was very limited and they had no expectation of expansion because of legal squabbles within the company; that private respondent agreed to allow petitioners to use its posts in Naga City because there were many subscribers therein who could not be served by them because of lack of facilities; and that while the telephone lines strung to the posts were very light in 1977, said posts have become heavily loaded in 1989.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999222755432129,
+      "ISSUE": 5.3678239055443555e-05,
+      "RULING": 9.568504992785165e-07,
+      "OTHER": 2.3104543288354762e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S022",
+    "case_id": "GR107112_19940224",
+    "text": "Engr. Antonio Borja, Chief of private respondent's Line Operation and Maintenance Department, declared that the posts being used by petitioners totalled 1,403 as of April 17, 1989, 192 of which were in the towns of Pili, Canaman, and Magarao, all outside Naga City (Exhs. \"B\" and \"B-1\"); that petitioners' cables strung to the posts in 1989 are much bigger than those in November, 1977; that in 1987, almost 100 posts were destroyed by typhoon Sisang: around 20 posts were located between Naga City and the town of Pili while the posts in barangay Concepcion, Naga City were broken at the middle which had been bored by petitioner's linemen to enable them to string bigger telephone lines; that while the cost per post in 1977 was only from P700.00 to P1,000.00, their costs in 1989 went up from P1,500.00 to P2,000.00, depending on the size; that some lines that were strung to the posts did not follow the minimum vertical clearance required by the National Building Code, so that there were cases in 1988 where, because of the low clearance of the cables, passing trucks would accidentally touch said cables causing the posts to fall and resulting in brown-outs until the electric lines were repaired.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9998519420623779,
+      "ISSUE": 9.785316069610417e-05,
+      "RULING": 1.7049186453732545e-06,
+      "OTHER": 4.854219514527358e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S023",
+    "case_id": "GR107112_19940224",
+    "text": "Dario Bernardez, Project Supervisor and Acting General Manager of private respondent and Manager of Region V of NEA, declared that according to NEA guidelines in 1985 (Exh. \"C\"), for the use by private telephone systems of electric cooperatives' posts, they should pay a minimum monthly rental of P4.00 per post, and considering the escalation of prices since 1985, electric cooperatives have been charging from P10.00 to P15.00 per post, which is what petitioners should pay for the use of the posts.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999195337295532,
+      "ISSUE": 5.3266718168742955e-05,
+      "RULING": 1.0235634135824512e-06,
+      "OTHER": 2.6067571525345556e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S024",
+    "case_id": "GR107112_19940224",
+    "text": "Engineer Antonio Macandog, Department Head of the Office of Services of private respondent, testified on the poor service rendered by petitioners' telephone lines, like the telephone in their Complaints Section which was usually out of order such that they could not respond to the calls of their customers.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999356269836426,
+      "ISSUE": 4.346876448835246e-05,
+      "RULING": 6.298490120570932e-07,
+      "OTHER": 2.0269870219635777e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S026",
+    "case_id": "GR107112_19940224",
+    "text": "Finally, Atty. Luis General, Jr., private respondent's counsel, testified that the Board of Directors asked him to study the contract sometime during the latter part of 1982 or in 1983, as it had appeared very disadvantageous to private respondent.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999251365661621,
+      "ISSUE": 3.782207568292506e-05,
+      "RULING": 9.282598512072582e-07,
+      "OTHER": 3.609169289120473e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S027",
+    "case_id": "GR107112_19940224",
+    "text": "Notwithstanding his recommendation for the filing of a court action to reform the contract, the former general managers of private respondent wanted to adopt a soft approach with petitioners about the matter until the term of General Manager Henry Pascual who, after failing to settle the matter amicably with petitioners, finally agreed for him to file the present action for reformation of contract.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999480247497559,
+      "ISSUE": 3.336074223625474e-05,
+      "RULING": 8.254980343735951e-07,
+      "OTHER": 1.7718060917104594e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S028",
+    "case_id": "GR107112_19940224",
+    "text": "On the other hand, petitioner Maggay testified to the following effect: (1) It is true that he was a member of the Board of Directors of private respondent and at the same time the lawyer of petitioner when the contract was executed, but Atty. Gaudioso Tena, who was also a member of the Board of Directors of private respondent, was the one who saw to it that the contract was fair to both parties.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9998979568481445,
+      "ISSUE": 8.052784687606618e-05,
+      "RULING": 1.8712519249675097e-06,
+      "OTHER": 1.956858250196092e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S029",
+    "case_id": "GR107112_19940224",
+    "text": "With regard to the first cause of action: (a) Private respondent has the right under the contract to use ten (10) telephone units of petitioners for as long as it wishes without paying anything therefor except for long distance calls through PLDT out of which the latter get only 10% of the charges.",
+    "reference_label": "FACT",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 5.715756196877919e-05,
+      "ISSUE": 0.4190874695777893,
+      "RULING": 0.5795682072639465,
+      "OTHER": 0.001287209102883935
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S032",
+    "case_id": "GR107112_19940224",
+    "text": "Concerning the second cause of action, the intention of the parties when they entered into the contract was that the coverage thereof would include the whole area serviced by petitioners because at that time, they already had subscribers outside Naga City.",
+    "reference_label": "FACT",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 7.798888691468164e-05,
+      "ISSUE": 0.0052771056070923805,
+      "RULING": 0.9941105246543884,
+      "OTHER": 0.0005343006341718137
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S033",
+    "case_id": "GR107112_19940224",
+    "text": "Private respondent, in fact, had asked for telephone connections outside Naga City for its officers and employees residing there in addition to the ten (10) telephone units mentioned in the contract.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999343156814575,
+      "ISSUE": 3.220513463020325e-05,
+      "RULING": 2.0802906419703504e-06,
+      "OTHER": 3.1519706681137905e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S034",
+    "case_id": "GR107112_19940224",
+    "text": "Petitioners have not been charging private respondent for the installation, transfers and re-connections of said telephones so that naturally, they use the posts for those telephone lines.",
+    "reference_label": "FACT",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 8.105607776087709e-06,
+      "ISSUE": 0.0006410062196664512,
+      "RULING": 0.9991300702095032,
+      "OTHER": 0.0002207833167631179
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S038",
+    "case_id": "GR107112_19940224",
+    "text": "Thus, said court ruled that the contract should be reformed by ordering petitioners to pay private respondent compensation for the use of their posts in Naga City, while private respondent should also be ordered to pay the monthly bills for the use of the telephones also in Naga City.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999297857284546,
+      "ISSUE": 4.4745342165697366e-05,
+      "RULING": 8.377806466342008e-07,
+      "OTHER": 2.4669450795045123e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S039",
+    "case_id": "GR107112_19940224",
+    "text": "And taking into consideration the guidelines of the NEA on the rental of posts by telephone companies and the increase in the costs of such posts, the trial court opined that a monthly rental of P10.00 for each post of private respondent used by petitioners is reasonable, which rental it should pay from the filing of the complaint in this case on January 2, 1989.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.999721109867096,
+      "ISSUE": 0.00020601085270754993,
+      "RULING": 3.6814822124142665e-06,
+      "OTHER": 6.915256381034851e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S040",
+    "case_id": "GR107112_19940224",
+    "text": "And in like manner, private respondent should pay petitioners from the same date its monthly bills for the use and transfers of its telephones in Naga City at the same rate that the public are paying.",
+    "reference_label": "FACT",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.9671224436024204e-05,
+      "ISSUE": 5.422647518571466e-05,
+      "RULING": 0.9994438290596008,
+      "OTHER": 0.0004823460185434669
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S041",
+    "case_id": "GR107112_19940224",
+    "text": "On private respondent's second cause of action, the trial court found that the contract does not mention anything about the use by petitioners of private respondent's posts outside Naga City.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999109506607056,
+      "ISSUE": 7.280113641172647e-05,
+      "RULING": 4.871573082709801e-07,
+      "OTHER": 1.5695313777541742e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S042",
+    "case_id": "GR107112_19940224",
+    "text": "Therefore, the trial court held that for reason of equity, the contract should be reformed by including therein the provision that for the use of private respondent's posts outside Naga City, petitioners should pay a monthly rental of P10.00 per post, the payment to start on the date this case was filed, or on January 2, 1989, and private respondent should also pay petitioners the monthly dues on its telephone connections located outside Naga City beginning January, 1989.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999115467071533,
+      "ISSUE": 6.291230238275602e-05,
+      "RULING": 9.757681027622311e-07,
+      "OTHER": 2.4534421754651703e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S043",
+    "case_id": "GR107112_19940224",
+    "text": "And with respect to private respondent's third cause of action, the trial court found the claim not sufficiently proved.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9998306035995483,
+      "ISSUE": 0.0001515299954917282,
+      "RULING": 8.658283832119196e-07,
+      "OTHER": 1.7032320101861842e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S045",
+    "case_id": "GR107112_19940224",
+    "text": "Disagreeing with the foregoing judgment, petitioners appealed to respondent Court of Appeals.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9998964071273804,
+      "ISSUE": 5.209842129261233e-05,
+      "RULING": 1.0554393838901888e-06,
+      "OTHER": 5.039435200160369e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S047",
+    "case_id": "GR107112_19940224",
+    "text": "The motion for reconsideration was denied in the resolution dated September 10, 1992.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9998966455459595,
+      "ISSUE": 5.5645617976551875e-05,
+      "RULING": 1.4492973150481703e-06,
+      "OTHER": 4.623842687578872e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S049",
+    "case_id": "GR107112_19940224",
+    "text": "Petitioners assert earnestly that Article 1267 of the New Civil Code is not applicable primarily because the contract does not involve the rendition of service or a personal prestation and it is not for future service with future unusual change.",
+    "reference_label": "FACT",
+    "predicted_label": "ISSUE",
+    "probabilities": {
+      "FACT": 0.0003516371361911297,
+      "ISSUE": 0.9995009899139404,
+      "RULING": 0.0001052514708135277,
+      "OTHER": 4.2164658225374296e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S098",
+    "case_id": "GR107112_19940224",
+    "text": "Defendant-appellant stresses that the applicability of said provision is a question of fact, and that it should have been given the opportunity to present evidence on said question.",
+    "reference_label": "FACT",
+    "predicted_label": "ISSUE",
+    "probabilities": {
+      "FACT": 0.0005958568071946502,
+      "ISSUE": 0.9993504881858826,
+      "RULING": 2.962051803478971e-05,
+      "OTHER": 2.3939137463457882e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S001",
+    "case_id": "GR88880_19910430",
+    "text": "The Philippine National Bank (PNB) has appealed by certiorari from the decision, promulgated on June 27, 1989 by the Court of Appeals in CA-G.R. CV No. 09791 entitled, \"AMBROSIO PADILLA, plaintiff-appellant versus PHILIPPINE NATIONAL BANK, defendant-appellee,\" reversing the decision of the trial court which had dismissed the private respondent's complaint \"to annul interest increases.\"",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9996317625045776,
+      "ISSUE": 0.000347735796822235,
+      "RULING": 1.0482795005373191e-06,
+      "OTHER": 1.9373717805137858e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S002",
+    "case_id": "GR88880_19910430",
+    "text": "In July 1982, the private respondent applied for, and was granted by petitioner PNB, a credit line of P1.8 million, secured by a real estate mortgage, for a term of two (2) years, with 18% interest per annum.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.999930739402771,
+      "ISSUE": 4.323545363149606e-05,
+      "RULING": 1.5652923366360483e-06,
+      "OTHER": 2.4418131943093613e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S003",
+    "case_id": "GR88880_19910430",
+    "text": "Private respondent executed in favor of the PNB a Credit Agreement, two (2) promissory notes in the amount of P900,000.00 each, and a Real Estate Mortgage Contract.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999356269836426,
+      "ISSUE": 3.198059130227193e-05,
+      "RULING": 1.4602325109080994e-06,
+      "OTHER": 3.101315087405965e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S005",
+    "case_id": "GR88880_19910430",
+    "text": "The Promissory Notes, in turn, uniformly authorized the PNB to increase the stipulated 18% interest per annum \"within the limits allowed by law at any time depending on whatever policy it [PNB] may adopt in the future; Provided, that, the interest rate on this note shall be correspondingly decreased in the event that the applicable maximum interest rate is reduced by law or by the Monetary Board.\"",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9997250437736511,
+      "ISSUE": 6.596866296604276e-05,
+      "RULING": 6.844926247140393e-05,
+      "OTHER": 0.0001405095827067271
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S006",
+    "case_id": "GR88880_19910430",
+    "text": "On June 20, 1984, PNB informed the private respondent that (1) his credit line of P1.8 million \"will expire on July 4, 1984,\" (2) \"[i]f renewal of the line for another year is intended, please submit soonest possible your request,\" and (3) the \"present policy of the Bank requires at least 30% reduction of principal before your line can be renewed.\"",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999382495880127,
+      "ISSUE": 3.679306973936036e-05,
+      "RULING": 1.2668001545534935e-06,
+      "OTHER": 2.3597831386723556e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S007",
+    "case_id": "GR88880_19910430",
+    "text": "Complying, private respondent on June 25, 1984, paid PNB P540,000.00 (30% of P1.8 million) and requested that \"the balance of P1,260,000.00 be renewed for another period of two (2) years under the same arrangement\" and that \"the increase of the interest rate of my mortgage loan be from 18% to 21%\".",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999533891677856,
+      "ISSUE": 2.8967144316993654e-05,
+      "RULING": 8.261097264039563e-07,
+      "OTHER": 1.674909253779333e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S008",
+    "case_id": "GR88880_19910430",
+    "text": "On August 10, 1984, PNB informed private respondent that \"we can not give due course to your request for preferential interest rate in view of the following reasons: Existing Loan Policies of the bank requires 32% for loan of more than one year; Our present cost of funds has substantially increased.\"",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999479055404663,
+      "ISSUE": 3.387265314813703e-05,
+      "RULING": 8.702398304194503e-07,
+      "OTHER": 1.7443215256207623e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S009",
+    "case_id": "GR88880_19910430",
+    "text": "In letters dated September 12, 1984 and September 13, 1984, PNB informed private respondent that \"the interest rate on your outstanding line/loan is hereby adjusted from 32% p.a. to 41% p.a. (35% prime rate + 6%) effective September 6, 1984;\" and further explained \"why we can not grant your request for a lower rate of 21% or 24%.\"",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999494552612305,
+      "ISSUE": 2.880927968362812e-05,
+      "RULING": 9.136624612438027e-07,
+      "OTHER": 2.0781699276994914e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S010",
+    "case_id": "GR88880_19910430",
+    "text": "In a letter dated September 24, 1984 to PNB, private respondent registered his protest against the increase of interest rate from 18% to 32% on July 4, 1984 and from 32% to 41% on September 6, 1984.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999454021453857,
+      "ISSUE": 2.6699495720095e-05,
+      "RULING": 7.940261070871202e-07,
+      "OTHER": 2.7107951609650627e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S013",
+    "case_id": "GR88880_19910430",
+    "text": "On March 31, 1985, the private respondent paid the P300,000 balance of his obligation to PNB.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999412298202515,
+      "ISSUE": 2.6353418434155174e-05,
+      "RULING": 9.318973184235801e-07,
+      "OTHER": 3.141890556435101e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S015",
+    "case_id": "GR88880_19910430",
+    "text": "On June 27, 1989, the Court of Appeals reversed the trial court, hence, PNB's recourse to this Court by a petition for review under Rule 45 of the Rules of Court.",
+    "reference_label": "FACT",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9999227523803711,
+      "ISSUE": 5.7803183153737336e-05,
+      "RULING": 8.043473940233525e-07,
+      "OTHER": 1.860662996477913e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S048",
+    "case_id": "GR107112_19940224",
+    "text": "Petitioners assign the following pertinent errors committed by respondent court: 1) in making a contract for the parties by invoking Article 1267 of the New Civil Code; 2) in ruling that prescription of the action for reformation of the contract in this case commenced from the time it became disadvantageous to private respondent; and 3) in ruling that the contract was subject to a potestative condition in favor of petitioners.",
+    "reference_label": "ISSUE",
+    "predicted_label": "ISSUE",
+    "probabilities": {
+      "FACT": 0.0021393345668911934,
+      "ISSUE": 0.9978244304656982,
+      "RULING": 6.653535365330754e-06,
+      "OTHER": 2.9606217140099034e-05
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S086",
+    "case_id": "GR107112_19940224",
+    "text": "For basically, the main and pivotal issue in this case is whether the continued enforcement of the contract Exh. \"A\" between the parties has, through the years (since 1977), become too iniquitous or disadvantageous to the plaintiff and too one-sided in favor of defendant-appellant, so that a solution must be found to relieve plaintiff from the continued operation of said agreement and to prevent defendant-appellant from further unjustly enriching itself at plaintiff's expense.",
+    "reference_label": "ISSUE",
+    "predicted_label": "ISSUE",
+    "probabilities": {
+      "FACT": 7.814311538822949e-05,
+      "ISSUE": 0.769123375415802,
+      "RULING": 0.23003166913986206,
+      "OTHER": 0.0007667705649510026
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S016",
+    "case_id": "GR88880_19910430",
+    "text": "The assignments of error raised in PNB's petition for review can be resolved into a single legal issue of whether the bank, within the term of the loan which it granted to the private respondent, may unilaterally change or increase the interest rate stipulated therein at will and as often as it pleased.",
+    "reference_label": "ISSUE",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 4.3953736167168245e-05,
+      "ISSUE": 0.10718539357185364,
+      "RULING": 0.8919194936752319,
+      "OTHER": 0.0008511205087415874
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S080",
+    "case_id": "GR107112_19940224",
+    "text": "However, our disposition of the present controversy does not end here.",
+    "reference_label": "OTHER",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 7.698446097492706e-06,
+      "ISSUE": 0.0006690057343803346,
+      "RULING": 0.9984973669052124,
+      "OTHER": 0.0008259546593762934
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S001",
+    "case_id": "GR107112_19940224",
+    "text": "The case of Reyes v. Caltex (Philippines), Inc. enunciated the doctrine that where a person by his contract charges himself with an obligation possible to be performed, he must perform it, unless its performance is rendered impossible by the act of God, by the law, or by the other party, it being the rule that in case the party desires to be excused from performance in the event of contingencies arising thereto, it is his duty to provide the basis therefor in his contract.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.4887658582883887e-06,
+      "ISSUE": 7.45352081139572e-05,
+      "RULING": 0.9997779726982117,
+      "OTHER": 0.00014509703032672405
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S002",
+    "case_id": "GR107112_19940224",
+    "text": "With the enactment of the New Civil Code, a new provision was included therein namely, Article 1267 which provides: \"When the service has become so difficult as to be manifestly beyond the contemplation of the parties, the obligor may also be released therefrom, in whole or in part.\"",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 0.00010882990318350494,
+      "ISSUE": 8.745462400838733e-05,
+      "RULING": 0.9986756443977356,
+      "OTHER": 0.001127996132709086
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S003",
+    "case_id": "GR107112_19940224",
+    "text": "In the report of the Code Commission, the rationale behind this innovation was explained, thus: \"The general rule is that impossibility of performance releases the obligor.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.4225138329493348e-05,
+      "ISSUE": 0.000204138268600218,
+      "RULING": 0.999404788017273,
+      "OTHER": 0.00037686037831008434
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S004",
+    "case_id": "GR107112_19940224",
+    "text": "However, it is submitted that when the service has become so difficult as to be manifestly beyond the contemplation of the parties, the court should be authorized to release the obligor in whole or in part.",
+    "reference_label": "RULING",
+    "predicted_label": "ISSUE",
+    "probabilities": {
+      "FACT": 0.09124062210321426,
+      "ISSUE": 0.9004276394844055,
+      "RULING": 0.004876051563769579,
+      "OTHER": 0.003455729689449072
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S005",
+    "case_id": "GR107112_19940224",
+    "text": "The intention of the parties should govern and if it appears that the service turns out to be so difficult as to have been beyond their contemplation, it would be doing violence to that intention to hold the obligor still responsible.\"",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.1787329842481995e-06,
+      "ISSUE": 4.441913915798068e-05,
+      "RULING": 0.9997206330299377,
+      "OTHER": 0.00023274410341400653
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S006",
+    "case_id": "GR107112_19940224",
+    "text": "In other words, fair and square consideration underscores the legal precept therein.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.889058512460906e-05,
+      "ISSUE": 0.0001163928973255679,
+      "RULING": 0.9821439385414124,
+      "OTHER": 0.017720824107527733
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S053",
+    "case_id": "GR107112_19940224",
+    "text": "Indeed, in embodying the equitable remedy of reformation of instruments in the New Civil Code, the Code Commission gave its reasons as follows: 'Equity dictates the reformation of an instrument in order that the true intention of the contracting parties may be expressed.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 4.389336027088575e-06,
+      "ISSUE": 5.8951438404619694e-05,
+      "RULING": 0.9998051524162292,
+      "OTHER": 0.00013156999193597585
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S054",
+    "case_id": "GR107112_19940224",
+    "text": "The courts by the reformation do not attempt to make a new contract for the parties, but to make the instrument express their real agreement.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.318872930118232e-06,
+      "ISSUE": 7.102849485818297e-05,
+      "RULING": 0.9997528195381165,
+      "OTHER": 0.00017387259867973626
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S055",
+    "case_id": "GR107112_19940224",
+    "text": "The rationale of the doctrine is that it would be unjust and inequitable to allow the enforcement of a written instrument which does not reflect or disclose the real meeting of the minds of the parties.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.653184992595925e-06,
+      "ISSUE": 0.0004544684779830277,
+      "RULING": 0.9992855191230774,
+      "OTHER": 0.00025739549892023206
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S056",
+    "case_id": "GR107112_19940224",
+    "text": "The rigor of the legalistic rule that a written instrument should be the final and inflexible criterion and measure of the rights and obligations of the contracting parties is thus tempered to forestall the effects of mistake, fraud, inequitable conduct, or accident.' (pp. 55-56, Report of Code Commission)",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.6723632799985353e-06,
+      "ISSUE": 8.999932470032945e-05,
+      "RULING": 0.9997518658638,
+      "OTHER": 0.00015543223707936704
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S057",
+    "case_id": "GR107112_19940224",
+    "text": "Thus, Articles 1359, 1361, 1362, 1363 and 1364 of the New Civil Code provide in essence that where through mistake or accident on the part of either or both of the parties or mistake or fraud on the part of the clerk or typist who prepared the instrument, the true intention of the parties is not expressed therein, then the instrument may be reformed at the instance of either party if there was mutual mistake on their part, or by the injured party if only he was mistaken.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.865426151605789e-06,
+      "ISSUE": 9.703719842946157e-05,
+      "RULING": 0.9997190833091736,
+      "OTHER": 0.00017997086979448795
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S062",
+    "case_id": "GR107112_19940224",
+    "text": "The fact that said contract has become iniquitous or disadvantageous to plaintiff as the years went by did not, however, give plaintiff a cause of action for reformation of said contract, for the reasons already pointed out earlier.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.840821591438726e-06,
+      "ISSUE": 9.396069071954116e-05,
+      "RULING": 0.999692440032959,
+      "OTHER": 0.00020976953965146095
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S063",
+    "case_id": "GR107112_19940224",
+    "text": "But this does not mean that plaintiff is completely without a remedy, for we believe that the allegations of its complaint herein and the evidence it has presented sufficiently make out a cause of action under Art. 1267 of the New Civil Code for its release from the agreement in question.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.930741857198882e-06,
+      "ISSUE": 9.661649528425187e-05,
+      "RULING": 0.999715268611908,
+      "OTHER": 0.00018519423610996455
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S065",
+    "case_id": "GR107112_19940224",
+    "text": "Add to this the destruction of some of plaintiff's poles during typhoons like the strong typhoon Sisang in 1987 because of the heavy telephone cables attached thereto, and the escalation of the costs of electric poles from 1977 to 1989, and the conclusion is indeed ineluctable that the agreement Exh. \"A\" has already become too one-sided in favor of appellant to the great disadvantage of plaintiff, in short, the continued enforcement of said contract has manifestly gone far beyond the contemplation of plaintiff, so much so that it should now be released therefrom under Art. 1267 of the New Civil Code to avoid appellant's unjust enrichment at its (plaintiff's) expense.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.7610522010945715e-06,
+      "ISSUE": 0.00014807684055995196,
+      "RULING": 0.9996942281723022,
+      "OTHER": 0.0001549467269796878
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S066",
+    "case_id": "GR107112_19940224",
+    "text": "As stated by Tolentino in his commentaries on the Civil Code citing foreign civilist Ruggiero, 'equity demands a certain economic equilibrium between the prestation and the counter-prestation, and does not permit the unlimited impoverishment of one party for the benefit of the other by the excessive rigidity of the principle of the obligatory force of contracts (IV Tolentino, Civil Code of the Philippines, 1986 ed., pp. 247-248).",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.5586077754269354e-06,
+      "ISSUE": 7.933199958642945e-05,
+      "RULING": 0.9997575879096985,
+      "OTHER": 0.00016052593127824366
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S068",
+    "case_id": "GR107112_19940224",
+    "text": "In affirming said ruling, we are not making a new contract for the parties herein, but we find it necessary to do so in order not to disrupt the basic and essential services being rendered by both parties herein to the public and to avoid unjust enrichment by appellant at the expense of plaintiff, said arrangement to continue only until such time as said parties can re-negotiate another agreement over the same subject-matter covered by the agreement Exh. \"A\".",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.0756162939505884e-06,
+      "ISSUE": 0.00014852176536805928,
+      "RULING": 0.999620795249939,
+      "OTHER": 0.0002285236696479842
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S069",
+    "case_id": "GR107112_19940224",
+    "text": "Once said agreement is reached and executed by the parties, the aforesaid ruling of the lower court and affirmed by us shall cease to exist and shall be substituted and superseded by their new agreement.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 5.5991404224187136e-06,
+      "ISSUE": 3.581408236641437e-05,
+      "RULING": 0.9997405409812927,
+      "OTHER": 0.000218131099245511
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S070",
+    "case_id": "GR107112_19940224",
+    "text": "Article 1267 speaks of \"service\" which has become so difficult.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 9.06184286577627e-05,
+      "ISSUE": 0.00032022380037233233,
+      "RULING": 0.9873474836349487,
+      "OTHER": 0.012241652235388756
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S071",
+    "case_id": "GR107112_19940224",
+    "text": "Taking into consideration the rationale behind this provision, the term \"service\" should be understood as referring to the \"performance\" of the obligation.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 6.553568709932733e-06,
+      "ISSUE": 6.65970947011374e-05,
+      "RULING": 0.9992262125015259,
+      "OTHER": 0.0007006828673183918
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S072",
+    "case_id": "GR107112_19940224",
+    "text": "In the present case, the obligation of private respondent consists in allowing petitioners to use its posts in Naga City, which is the service contemplated in said article.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.208390580766718e-06,
+      "ISSUE": 0.0007288640481419861,
+      "RULING": 0.9990039467811584,
+      "OTHER": 0.00026398172485642135
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S073",
+    "case_id": "GR107112_19940224",
+    "text": "Furthermore, a bare reading of this article reveals that it is not a requirement thereunder that the contract be for future service with future unusual change.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.8257541089260485e-06,
+      "ISSUE": 5.0813614507205784e-05,
+      "RULING": 0.9996529817581177,
+      "OTHER": 0.0002933478681370616
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S074",
+    "case_id": "GR107112_19940224",
+    "text": "According to Senator Arturo M. Tolentino, Article 1267 states in our law the doctrine of unforeseen events.",
+    "reference_label": "RULING",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.9118580222129822,
+      "ISSUE": 0.03598889708518982,
+      "RULING": 0.014795172028243542,
+      "OTHER": 0.03735784813761711
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S075",
+    "case_id": "GR107112_19940224",
+    "text": "This is said to be based on the discredited theory of rebus sic stantibus in public international law; under this theory, the parties stipulate in the light of certain prevailing conditions, and once these conditions cease to exist the contract also ceases to exist.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 6.4640612436051015e-06,
+      "ISSUE": 0.002900162013247609,
+      "RULING": 0.9964627623558044,
+      "OTHER": 0.0006306275608949363
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S076",
+    "case_id": "GR107112_19940224",
+    "text": "Considering practical needs and the demands of equity and good faith, the disappearance of the basis of a contract gives rise to a right to relief in favor of the party prejudiced.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.510117610654561e-06,
+      "ISSUE": 4.722596349893138e-05,
+      "RULING": 0.999737560749054,
+      "OTHER": 0.00021277104679029435
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S078",
+    "case_id": "GR107112_19940224",
+    "text": "The ruling in the Occe\u00f1a case is not applicable because we agree with respondent court that the allegations in private respondent's complaint and the evidence it has presented sufficiently made out a cause of action under Article 1267.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.865779490297427e-06,
+      "ISSUE": 0.00024741579545661807,
+      "RULING": 0.9994844198226929,
+      "OTHER": 0.000264291389612481
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S079",
+    "case_id": "GR107112_19940224",
+    "text": "We, therefore, release the parties from their correlative obligations under the contract.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 4.3929871935688425e-06,
+      "ISSUE": 0.00011966897000093013,
+      "RULING": 0.9996143579483032,
+      "OTHER": 0.0002616114798001945
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S081",
+    "case_id": "GR107112_19940224",
+    "text": "We have to take into account the possible consequences of merely releasing the parties therefrom: petitioners will remove the telephone wires/cables in the posts of private respondent, resulting in disruption of their essential service to the public; while private respondent, in consonance with the contract will return all the telephone units to petitioners, causing prejudice to its business.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.1924863631284097e-06,
+      "ISSUE": 0.0002205566270276904,
+      "RULING": 0.9988489151000977,
+      "OTHER": 0.0009282297105528414
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S082",
+    "case_id": "GR107112_19940224",
+    "text": "We shall not allow such eventuality.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 4.195342262391932e-05,
+      "ISSUE": 0.00012557031004689634,
+      "RULING": 0.999392032623291,
+      "OTHER": 0.0004404280916787684
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S083",
+    "case_id": "GR107112_19940224",
+    "text": "Rather, we require, as ordered by the trial court: 1) petitioners to pay private respondent for the use of its posts in Naga City and in the towns of Milaor, Canaman, Magarao and Pili, Camarines Sur and in other places where petitioners use private respondent's posts, the sum of ten (P10.00) pesos per post, per month, beginning January, 1989; and 2) private respondent to pay petitioner the monthly dues of all its telephones at the same rate being paid by the public beginning January, 1989.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.3401748219621368e-05,
+      "ISSUE": 0.0015197942266240716,
+      "RULING": 0.9976983666419983,
+      "OTHER": 0.0007684901938773692
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S084",
+    "case_id": "GR107112_19940224",
+    "text": "The peculiar circumstances of the present case, as distinguished further from the Occe\u00f1a case, necessitates exercise of our equity jurisdiction.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 4.216107299725991e-06,
+      "ISSUE": 0.00013202364789322019,
+      "RULING": 0.9995385408401489,
+      "OTHER": 0.0003253195609431714
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S088",
+    "case_id": "GR107112_19940224",
+    "text": "But although plaintiff cannot, as we have held, correctly invoke reformation of contract as a proper remedy (there having been no showing of a mistake or error in said contract on the part of any of the parties so as to result in its failure to express their true intent), this does not mean that plaintiff is absolutely without a remedy in order to relieve itself from a contract that has gone far beyond its contemplation and has become highly iniquitous and disadvantageous to it through the years because of the expansion of defendant-appellant's business and the increase in the volume of its subscribers.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.2547262688021874e-06,
+      "ISSUE": 0.00011958156392211094,
+      "RULING": 0.9997114539146423,
+      "OTHER": 0.00016667346062604338
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S089",
+    "case_id": "GR107112_19940224",
+    "text": "And as it is the duty of the Court to administer justice, it must do so in this case in the best way and manner it can in the light of the proven facts and the law or laws applicable thereto.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.8568285870278487e-06,
+      "ISSUE": 0.0001413462741766125,
+      "RULING": 0.9996358156204224,
+      "OTHER": 0.0002199898153776303
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S090",
+    "case_id": "GR107112_19940224",
+    "text": "It is settled that when the trial court decides a case in favor of a party on a certain ground, the appellate court may uphold the decision below upon some other point which was ignored or erroneously decided by the trial court (Garcia Valdez v. Tuazon, 40 Phil. 943; Relativo v. Castro, 76 Phil. 563; Carillo v. Salak de Paz, 18 SCRA 467).",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.9548496058851015e-06,
+      "ISSUE": 0.0002748379483819008,
+      "RULING": 0.9995180368423462,
+      "OTHER": 0.0002041824336629361
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S091",
+    "case_id": "GR107112_19940224",
+    "text": "Furthermore, the appellate court has the discretion to consider an unassigned error that is closely related to an error properly assigned (Paterno v. Jao Yan, 1 SCRA 631; Hernandez v. Andal, 78 Phil. 196).",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.413175363675691e-06,
+      "ISSUE": 0.00011364710371708497,
+      "RULING": 0.9994320273399353,
+      "OTHER": 0.00045079473056830466
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S092",
+    "case_id": "GR107112_19940224",
+    "text": "It has also been held that the Supreme Court (and this Court as well) has the authority to review matters, even if they are not assigned as errors in the appeal, if it is found that their consideration is necessary in arriving at a just decision of the case (Saura Import & Export Co., Inc. v. Phil. International Surety Co. and PNB, 8 SCRA 143).",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.0686057925777277e-06,
+      "ISSUE": 0.000156466820044443,
+      "RULING": 0.9996024966239929,
+      "OTHER": 0.0002379265206400305
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S093",
+    "case_id": "GR107112_19940224",
+    "text": "For it is the material allegations of fact in the complaint, not the legal conclusion made therein or the prayer, that determines the relief to which the plaintiff is entitled, and the plaintiff is entitled to as much relief as the facts warrant although that relief is not specifically prayed for in the complaint (Rosales v. Reyes and Ordoveza, 25 Phil. 495; Cabigao v. Lim, 50 Phil. 844; Baguioro v. Barrios, 77 Phil. 120).",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.3941833003627835e-06,
+      "ISSUE": 8.028163574635983e-05,
+      "RULING": 0.9996473789215088,
+      "OTHER": 0.0002709590771701187
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S094",
+    "case_id": "GR107112_19940224",
+    "text": "To quote an old but very illuminating decision of our Supreme Court through the pen of American jurist Adam C. Carson: 'Under our system of pleading it is the duty of the courts to grant the relief to which the parties are shown to be entitled by the allegations in their pleadings and the facts proven at the trial, and the mere fact that they themselves misconstrue the legal effects of the facts thus alleged and proven will not prevent the court from placing the just construction thereon and adjudicating the issues accordingly.' (Alzua v. Johnson, 21 Phil. 308)",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.5729175376909552e-06,
+      "ISSUE": 0.0001357839209958911,
+      "RULING": 0.9996471405029297,
+      "OTHER": 0.00021449406631290913
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S095",
+    "case_id": "GR107112_19940224",
+    "text": "And in the fairly recent case of Caltex Phil. Inc. v. IAC, 176 SCRA 741, the Honorable Supreme Court also held: 'We rule that the respondent court did not commit any error in taking cognizance of the aforesaid issues, although not raised before the trial court.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 4.257319960743189e-05,
+      "ISSUE": 0.05780249089002609,
+      "RULING": 0.9408400654792786,
+      "OTHER": 0.0013148720609024167
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S096",
+    "case_id": "GR107112_19940224",
+    "text": "The presence of strong consideration of substantial justice has led this Court to relax the well-entrenched rule that, except questions on jurisdiction, no question will be entertained on appeal unless it has been raised in the court below and it is within the issues made by the parties in their pleadings (Cordero v. Cabral, L-36789, July 25, 1983, 123 SCRA 532).",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.250573854529648e-06,
+      "ISSUE": 0.00018923111201729625,
+      "RULING": 0.9996373653411865,
+      "OTHER": 0.00017017997743096203
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S097",
+    "case_id": "GR107112_19940224",
+    "text": "We believe that the above authorities suffice to show that this Court did not err in applying Art. 1267 of the New Civil Code to this case.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 4.399419140099781e-06,
+      "ISSUE": 0.0008992327493615448,
+      "RULING": 0.9987874627113342,
+      "OTHER": 0.0003089647798333317
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S099",
+    "case_id": "GR107112_19940224",
+    "text": "But defendant-appellant cannot honestly and truthfully claim that it (did) not (have) the opportunity to present evidence on the issue of whether the continued operation of the contract Exh. \"A\" has now become too one-sided in its favor and too iniquitous, unfair, and disadvantageous to plaintiff.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 5.072686235507717e-06,
+      "ISSUE": 0.0017585239838808775,
+      "RULING": 0.9979867935180664,
+      "OTHER": 0.00024957890855148435
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S102",
+    "case_id": "GR107112_19940224",
+    "text": "Article 1144 of the New Civil Code provides, inter alia, that an action upon a written contract must be brought within ten (10) years from the time the right of the action accrues.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.911156479967758e-05,
+      "ISSUE": 0.0002757393813226372,
+      "RULING": 0.9994460940361023,
+      "OTHER": 0.0002490551269147545
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S103",
+    "case_id": "GR107112_19940224",
+    "text": "Clearly, the ten (10) year period is to be reckoned from the time the right of action accrues which is not necessarily the date of execution of the contract.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.026339188887505e-06,
+      "ISSUE": 4.661558341467753e-05,
+      "RULING": 0.9996700286865234,
+      "OTHER": 0.0002813400933519006
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S104",
+    "case_id": "GR107112_19940224",
+    "text": "As correctly ruled by respondent court, private respondent's right of action arose \"sometime during the latter part of 1982 or in 1983 when according to Atty. Luis General, Jr. x x x, he was asked by (private respondent's) Board of Directors to study said contract as it already appeared disadvantageous to (private respondent) (p. 31, tsn, May 8, 1989).",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 9.236112964572385e-05,
+      "ISSUE": 0.012283934280276299,
+      "RULING": 0.986505925655365,
+      "OTHER": 0.0011178454151377082
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S107",
+    "case_id": "GR107112_19940224",
+    "text": "Petitioners' allegations must be upheld in this regard.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 5.9738540585385635e-06,
+      "ISSUE": 0.0006493341643363237,
+      "RULING": 0.9989303946495056,
+      "OTHER": 0.00041433441219851375
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S108",
+    "case_id": "GR107112_19940224",
+    "text": "A potestative condition is a condition, the fulfillment of which depends upon the sole will of the debtor, in which case, the conditional obligation is void.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.5771372545714257e-06,
+      "ISSUE": 8.435329800704494e-05,
+      "RULING": 0.9996436834335327,
+      "OTHER": 0.0002704143989831209
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S109",
+    "case_id": "GR107112_19940224",
+    "text": "Based on this definition, respondent court's finding that the provision in the contract, to wit: \"(a) That the term or period of this contract shall be as long as the party of the first part (petitioner) has need for the electric light posts of the party of the second part (private respondent) x x x.\" is a potestative condition, is correct.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.2596933579043252e-06,
+      "ISSUE": 0.00027609546668827534,
+      "RULING": 0.9994215965270996,
+      "OTHER": 0.00029902817914262414
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S110",
+    "case_id": "GR107112_19940224",
+    "text": "However, it must have overlooked the other conditions in the same provision, to wit: \"x x x it being understood that this contract shall terminate when for any reason whatsoever, the party of the second part (private respondent) is forced to stop, abandoned (sic) its operation as a public service and it becomes necessary to remove the electric light post (sic);\" which are casual conditions since they depend on chance, hazard, or the will of a third person.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.1477796761028003e-05,
+      "ISSUE": 0.0001077253109542653,
+      "RULING": 0.9964939951896667,
+      "OTHER": 0.0033868143800646067
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S111",
+    "case_id": "GR107112_19940224",
+    "text": "In sum, the contract is subject to mixed conditions, that is, they depend partly on the will of the debtor and partly on chance, hazard or the will of a third person, which do not invalidate the aforementioned provision.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.2891206324638915e-06,
+      "ISSUE": 8.173645619535819e-05,
+      "RULING": 0.9995459914207458,
+      "OTHER": 0.0003709459269884974
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S112",
+    "case_id": "GR107112_19940224",
+    "text": "Nevertheless, in view of our discussions under the first and second issues raised by petitioners, there is no reason to set aside the questioned decision and resolution of respondent court.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.3463406907685567e-06,
+      "ISSUE": 0.00044372736010700464,
+      "RULING": 0.99928879737854,
+      "OTHER": 0.000264093279838562
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S113",
+    "case_id": "GR107112_19940224",
+    "text": "WHEREFORE, the petition is hereby DENIED.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 0.00024753587786108255,
+      "ISSUE": 0.002778951544314623,
+      "RULING": 0.9947155117988586,
+      "OTHER": 0.0022580083459615707
+    }
+  },
+  {
+    "sentence_id": "GR107112_19940224_R2_S114",
+    "case_id": "GR107112_19940224",
+    "text": "The decision of the Court of Appeals dated May 28, 1992 and its resolution dated September 10, 1992 are AFFIRMED.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.2159616491990164e-05,
+      "ISSUE": 0.0021725802216678858,
+      "RULING": 0.9975010752677917,
+      "OTHER": 0.0003041351737920195
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S018",
+    "case_id": "GR88880_19910430",
+    "text": "In the first place, although Section 2, P.D. No. 116 of January 29, 1973, authorizes the Monetary Board to prescribe the maximum rate or rates of interest for loans or renewal thereof and to change such rate or rates whenever warranted by prevailing economic and social conditions, it expressly provides that \"such changes shall not be made oftener than once every twelve months.\"",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.4140738130663522e-05,
+      "ISSUE": 0.00010782197932712734,
+      "RULING": 0.999658465385437,
+      "OTHER": 0.00021958375873509794
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S019",
+    "case_id": "GR88880_19910430",
+    "text": "Those increases were null and void, for if the Monetary Board itself was not authorized to make such changes oftener than once a year, even less so may a bank which is subordinate to the Board.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.495522039680509e-06,
+      "ISSUE": 0.00011671384709188715,
+      "RULING": 0.9996355772018433,
+      "OTHER": 0.00024528763606213033
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S020",
+    "case_id": "GR88880_19910430",
+    "text": "Secondly, as pointed out by the Court of Appeals, while the private respondent-debtor did agree in the Deed of Real Estate Mortgage that the interest rate may be increased during the life of the contract \"to such increase within the rate allowed by law, as the Board of Directors of the MORTGAGEE may prescribe\" or \"within the limits allowed by law\", no law was ever passed in July to November 1984 increasing the interest rates on loans or renewals thereof to 32%, 41% and 48% (per annum), and no documents were executed and delivered by the debtor to effectuate the increases.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.609099672350567e-05,
+      "ISSUE": 0.001938682165928185,
+      "RULING": 0.9977383613586426,
+      "OTHER": 0.0003068725054617971
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S025",
+    "case_id": "GR88880_19910430",
+    "text": "In the present case, the PNB relied on its own Board Resolution No. 681, PNB Circular No. 40-79-84, and PNB Circular No. 40-129-84, but those resolution and circulars are neither laws nor resolutions of the Monetary Board.",
+    "reference_label": "RULING",
+    "predicted_label": "FACT",
+    "probabilities": {
+      "FACT": 0.999427318572998,
+      "ISSUE": 0.0005413482431322336,
+      "RULING": 5.830877398693701e-06,
+      "OTHER": 2.543727714510169e-05
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S026",
+    "case_id": "GR88880_19910430",
+    "text": "CB Circular No. 905, Series of 1982 removed the Usury Law ceiling on interest rates - \"x x x increases in interest rates are not subject to any ceiling prescribed by the Usury Law,\" but it did not authorize the PNB, or any bank for that matter, to unilaterally and successively increase the agreed interest rates from 18% to 48% within a span of four (4) months, in violation of P.D. 116 which limits such changes to \"once every twelve months.\"",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 0.0013641715049743652,
+      "ISSUE": 0.002174629596993327,
+      "RULING": 0.9948373436927795,
+      "OTHER": 0.0016237592790275812
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S027",
+    "case_id": "GR88880_19910430",
+    "text": "Besides violating P.D. 116, the unilateral action of the PNB in increasing the interest rate on the private respondent's loan, violated the mutuality of contracts ordained in Article 1308 of the Civil Code: \"The contract must bind both contracting parties; its validity or compliance cannot be left to the will of one of them.\"",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 4.267223630449735e-06,
+      "ISSUE": 0.0006258663488551974,
+      "RULING": 0.9991588592529297,
+      "OTHER": 0.00021101276797708124
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S028",
+    "case_id": "GR88880_19910430",
+    "text": "In order that obligations arising from contracts may have the force of law between the parties, there must be mutuality between the parties based on their essential equality.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.9698203434236348e-06,
+      "ISSUE": 7.311660738196224e-05,
+      "RULING": 0.9997536540031433,
+      "OTHER": 0.00017025139823090285
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S029",
+    "case_id": "GR88880_19910430",
+    "text": "A contract containing a condition which makes its fulfillment dependent exclusively upon the uncontrolled will of one of the contracting parties, is void.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 2.8679930892394623e-06,
+      "ISSUE": 8.835906919557601e-05,
+      "RULING": 0.9996833801269531,
+      "OTHER": 0.00022531046124640852
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S030",
+    "case_id": "GR88880_19910430",
+    "text": "Hence, even assuming that the P1.8 million loan agreement between the PNB and the private respondent gave the PNB a license (although in fact there was none) to increase the interest rate at will during the term of the loan, that license would have been null and void for being violative of the principle of mutuality essential in contracts.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 5.0733387979562394e-06,
+      "ISSUE": 0.000455964298453182,
+      "RULING": 0.9993799924850464,
+      "OTHER": 0.00015888026973698288
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S031",
+    "case_id": "GR88880_19910430",
+    "text": "It would have invested the loan agreement with the character of a contract of adhesion, where the parties do not bargain on equal footing, the weaker party's (the debtor) participation being reduced to the alternative \"to take it or leave it\".",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 1.7900694047057186e-06,
+      "ISSUE": 4.992036338080652e-05,
+      "RULING": 0.9996483325958252,
+      "OTHER": 0.00029991319752298295
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S032",
+    "case_id": "GR88880_19910430",
+    "text": "Such a contract is a veritable trap for the weaker party whom the courts of justice must protect against abuse and imposition.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.1275358196580783e-06,
+      "ISSUE": 7.995644409675151e-05,
+      "RULING": 0.9997121691703796,
+      "OTHER": 0.00020474042685236782
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S034",
+    "case_id": "GR88880_19910430",
+    "text": "The increases imposed by PNB also contravene Art. 1956 of the Civil Code which provides that \"no interest shall be due unless it has been expressly stipulated in writing.\"",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 4.451541826711036e-06,
+      "ISSUE": 0.0003379385743755847,
+      "RULING": 0.9994410872459412,
+      "OTHER": 0.00021652171562891454
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S035",
+    "case_id": "GR88880_19910430",
+    "text": "The debtor herein never agreed in writing to pay the interest increases fixed by the PNB beyond 24% per annum, hence, he is not bound to pay a higher rate than that.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.163364453939721e-06,
+      "ISSUE": 9.019011486088857e-05,
+      "RULING": 0.9997933506965637,
+      "OTHER": 0.00011335669114487246
+    }
+  },
+  {
+    "sentence_id": "GR88880_19910430_S036",
+    "case_id": "GR88880_19910430",
+    "text": "WHEREFORE, finding no reversible error in the decision of the Court of Appeals in CA-G.R. CV No. 09791, the Court resolved to deny the petition for review for lack of merit, with costs against the petitioner.",
+    "reference_label": "RULING",
+    "predicted_label": "RULING",
+    "probabilities": {
+      "FACT": 3.455966725596227e-05,
+      "ISSUE": 0.026591720059514046,
+      "RULING": 0.9723552465438843,
+      "OTHER": 0.0010184758575633168
+    }
+  }
+]

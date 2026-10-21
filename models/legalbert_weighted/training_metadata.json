@@ -1,0 +1,36 @@
+{
+  "base_model": "nlpaueb/legal-bert-base-uncased",
+  "labels": [
+    "FACT",
+    "ISSUE",
+    "RULING",
+    "OTHER"
+  ],
+  "epochs": 8,
+  "seed": 42,
+  "class_weighting": "balanced",
+  "class_weights": {
+    "FACT": 0.5474137931034483,
+    "ISSUE": 10.583333333333334,
+    "RULING": 0.48596938775510207,
+    "OTHER": 20.0
+  },
+  "max_class_weight": 20.0,
+  "issue_weight_multiplier": 1.0,
+  "best_checkpoint": "models/legalbert_weighted\\checkpoint-384",
+  "best_validation_macro_f1": 0.4394952071057955,
+  "test_evaluated": false,
+  "train_cases": [
+    "GR111238_19950125",
+    "GR142381_20031015",
+    "GR159097_20100705",
+    "GRL12219_19180315",
+    "GRL29330_19871214",
+    "GRL74027_19891207"
+  ],
+  "validation_cases": [
+    "GR107112_19940224",
+    "GR88880_19910430"
+  ],
+  "provisional_labels": true
+}
