@@ -9,3 +9,11 @@ node_modules/
 !.env.example
 *.pem
 *.key
+
+# Local research inputs and generated artifacts. Existing tracked files remain tracked.
+models/
+outputs/
+runs/
+tmp/
+data/revision_20261027_*/
+data/reference_import_manifest.json

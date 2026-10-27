@@ -2,6 +2,12 @@
 
 Local research implementation for Facts–Issue–Ruling summarization of Philippine Supreme Court decisions on Obligations and Contracts.
 
+## Current status — 27 October 2026
+
+The active classifier remains `models/legalbert_balanced_v2`; LegalPegasus remains frozen. Final FIR drafts use selected source excerpts when generated paraphrases cannot pass the deliberately strict literal-source gate. This gate does not establish legal accuracy or completeness. Recent annotation and generator experiments were not promoted because they did not demonstrate a reliable improvement. See [the current research status](docs/STATUS_20261027.md) for results and limitations; earlier reports below describe historical experiments.
+
+Private source documents, new experimental datasets/checkpoints, and raw local outputs are excluded from new commits. Research scripts referencing `data/private/` require locally supplied materials; they are not standalone public benchmarks. Previously tracked model/data artifacts are preserved.
+
 ## Setup (Python 3.10 or 3.11)
 
 PowerShell shortcuts: run `powershell -ExecutionPolicy Bypass -File .\setup.ps1` to create/repair the environment, then `powershell -ExecutionPolicy Bypass -File .\start.ps1` to launch the app. These apply the execution policy only to that PowerShell process. No activation is required.
@@ -12,7 +18,7 @@ Run these commands in this folder using PowerShell:
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
 .\.venv\Scripts\python.exe train_legalbert.py --data data/sentences.jsonl
 .\.venv\Scripts\python.exe inference.py
 ```
@@ -25,13 +31,36 @@ Open http://127.0.0.1:8000 in your browser. Installation and first model use req
 - `train_legalpegasus.py`: separate optional full supervised fine-tuning experiment. The proposal explicitly uses frozen LegalPegasus; this script requires `--experimental-finetune` to make the methodology change explicit.
 - `pipeline.py`: learned role tagging, fixed exemplar prompts, bounded context windows, hierarchical chunk reduction, source evidence and warnings.
 - `inference.py` and `web/index.html`: local FastAPI backend and responsive HTML interface; select a full-case PDF to start processing automatically; the filename identifies the output. Model labels and digest are read-only, with JSON downloads.
-- The output workspace has three read-only stages: **LegalBERT** sentence labels and confidence, **LegalPegasus** paragraphs, and the assembled **Final form**. Each output can be downloaded. Outputs appear when the full pipeline completes; no end-user label corrections or review confirmation are required.
+- The output workspace has three read-only stages: **LegalBERT** raw sentence labels and uncalibrated scores, **LegalPegasus** raw generated paragraphs, and **Final form** with source evidence and literal verification. Each output can be downloaded. Outputs appear when the full pipeline completes; no end-user label corrections or review confirmation are required.
 - `evaluate.py`: per-block ROUGE-L, sentence BLEU, BERTScore for accepted/edited held-out outputs. Scores use 0–1 scales; save metrics separately from model validation.
 - `data/README.md`: exact annotation, exemplar, generator and reference schemas.
 
 The supplied proposal provides the design context. Its statements are research assumptions, not verified performance results. This implementation does not guarantee accurate FIR generation or factual grounding. PEGASUS is a summarization model rather than an instruction-tuned chatbot; few-shot formatting is experimental and needs empirical validation. The supplied workbook has now been imported and a provisional classifier is available locally in models/legalbert. Its suggested labels were not finalized; see TRAINING_RESULTS.md.
 
-## Optional generator experiment
+## Inference and verification
+
+### Source grounding added October 22
+
+The active pipeline still uses the saved LegalBERT adapter and frozen LegalPegasus. A separate evidence-selection layer now identifies explicit legal questions and a terminal WHEREFORE–SO ORDERED disposition, preserves attribution context, and supplies selected complete sentences to generation. Raw classifier labels are never overwritten; structural evidence disagreements are exported under `verification.label_conflicts`. No case-specific override file or reviewed test labels are used.
+
+`generated_blocks` contains the actual Pegasus output. `blocks` contains the final output. The final gate accepts generation only when it reproduces the complete selected source wording after whitespace normalization. Other paraphrases are **unverified**, not automatically declared false: they are replaced with labeled source excerpts and sentence IDs. Missing explicit issues are withheld. Missing terminal dispositions produce a warning. This intentionally favors source fidelity over fluent compression; it is not a semantic entailment verifier and cannot establish legal correctness, source quality, relevance, or completeness. Context-selection heuristics can still fail on unusual decisions, quotations, and separate opinions.
+
+This is a documented extension of the original model-only assembly step, not an improvement claimed for raw model accuracy. The UI and downloads retain the difference. The generator retries a length-capped output once at a larger limit and records every call; an unfinished or capped result cannot pass the final gate. Exact-case manual overrides remain disabled.
+
+When no reviewed exemplars are configured, the generator receives only the selected source text, matching the [model card's source-text interface](https://huggingface.co/nsi319/legal-pegasus). The previous instruction prefix was observed leaking into generated summaries. The few-shot prompt format remains available when 2–3 qualifying exemplars are supplied; none are fabricated or marked attorney-approved by this implementation.
+
+Run development checks with:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe verify_grounding.py --run-models
+```
+
+The two supplied example cases have already been inspected and are development regressions, not a new independent test set. No attorney-approved exemplars or new gold labels have been invented. Further classifier training requires consistently reviewed labels; independently reviewed decisions and accepted reference digests are needed before reporting legal-accuracy improvements. See `ACCURACY_IMPROVEMENTS.md` for the implementation and measured checks.
+
+Use `requirements-lock.txt` for reproducible installation. `requirements.txt` also pins PyArrow to the compatible version because PyArrow 26 requires NumPy 2 whereas this project uses NumPy 1.
+
+### Optional generator fine-tuning
 
 ```powershell
 .\.venv\Scripts\python.exe train_legalpegasus.py --data data/generator.jsonl --experimental-finetune

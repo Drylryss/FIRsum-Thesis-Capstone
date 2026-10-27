@@ -7,7 +7,7 @@ from pypdf import PdfWriter
 from pypdf.generic import DictionaryObject, NameObject, DecodedStreamObject
 
 
-def decision_pdf():
+def decision_pdf(blank_page=False):
     writer = PdfWriter()
     page = writer.add_blank_page(width=612, height=792)
     font = DictionaryObject({NameObject('/Type'): NameObject('/Font'),
@@ -16,6 +16,8 @@ def decision_pdf():
     stream = DecodedStreamObject()
     stream.set_data(b'BT /F1 12 Tf 50 700 Td (A decision.) Tj ET')
     page[NameObject('/Contents')] = writer._add_object(stream)
+    if blank_page:
+        writer.add_blank_page(width=612, height=792)
     output = io.BytesIO()
     writer.write(output)
     return ('decision.pdf', output.getvalue(), 'application/pdf')
@@ -45,9 +47,12 @@ class APITests(unittest.TestCase):
     def test_inference_contract(self):
         with patch('inference.execute', return_value={'case_id': 'decision', 'blocks': {'FACT': 'x'}}) as execute:
             response = self.client.post('/api/summarize', files={'file': decision_pdf()})
-            execute.assert_called_once_with('A decision.', 'decision')
+            execute.assert_called_once_with('A decision.', 'decision', [])
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()['blocks']['FACT'], 'x')
+        # Legacy/unverified model responses must not become exportable drafts.
+        self.assertEqual(response.json()['delivery']['status'], 'incomplete')
+        self.assertEqual(response.json()['delivery']['sections']['FACT']['text'], '')
 
     def test_missing_model_error(self):
         with patch('inference.execute', side_effect=RuntimeError('Train LegalBERT first')):
@@ -64,6 +69,20 @@ class APITests(unittest.TestCase):
 
     def test_manual_regeneration_not_exposed(self):
         self.assertEqual(self.client.post('/api/regenerate', json={}).status_code, 404)
+
+    def test_partial_extraction_stops_before_models_run(self):
+        with patch('inference.execute') as execute:
+            response = self.client.post('/api/summarize', files={'file': decision_pdf(blank_page=True)})
+            self.assertEqual(response.status_code, 422)
+            self.assertIn('Pages with missing or corrupt text: 2', response.json()['detail'])
+            execute.assert_not_called()
+
+    def test_preparation_keeps_partial_extraction_audit_for_inspection(self):
+        with patch('inference.execute') as execute:
+            response = self.client.post('/api/prepare', files={'file': decision_pdf(blank_page=True)})
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json()['extraction_audit']['blocked_pages'], [2])
+            execute.assert_not_called()
 
 
 if __name__ == '__main__':

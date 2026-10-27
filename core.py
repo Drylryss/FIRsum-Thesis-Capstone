@@ -45,6 +45,8 @@ def training_rows(path, generator=False):
     rows = read_jsonl(path)
     validate_splits(rows)
     for row in rows:
+        if row['split'] in {'train', 'validation'} and row.get('training_eligible') is False:
+            raise ValueError('Review-only records cannot enter training or validation: ' + str(row.get('sentence_id', row['case_id'])))
         if not isinstance(row.get('text'), str) or not row['text'].strip():
             raise ValueError('Each row needs nonempty text')
         if generator:
@@ -64,9 +66,17 @@ def training_rows(path, generator=False):
 def sentences(text):
     # Conservative splitter protects common legal abbreviations and initials.
     text = re.sub(r'\s+', ' ', text).strip()
-    protected = re.sub(r'\b(?:G\.R\.|No\.|Nos\.|Art\.|art\.|Arts\.|Mr\.|Mrs\.|Dr\.|Atty\.|SJ\.|Jr\.|Sr\.|St\.|pp\.|p\.|Inc\.|v\.|vs\.)|\b[A-Z]\.(?=\s+[A-Z])',
+    # Docket prefixes may contain spaces and a terminal CV./SP. before No.
+    # Protect only that identifier context, not ordinary sentence-final words.
+    text = re.sub(r'\b(?:C\.?\s*A\.?\s*[-–]\s*)?G\.\s*R\.(?:\s+(?:CV|SP)\.)?(?=\s+(?:No|Nos)\.)|\b(?:CV|SP)\.(?=\s+No\.)',
+                  lambda m: m[0].replace('.', '\uE000'), text)
+    protected = re.sub(r'\b(?:a\.k\.a\.|G\.R\.|No\.|Nos\.|Art\.|art\.|Arts\.|Mr\.|Mrs\.|Dr\.|Atty\.|SJ\.|Jr\.|Sr\.|St\.|pp\.|p\.|Inc\.|Corp\.|Co\.|Ltd\.|v\.|vs\.)|\b[A-Z]\.(?=\s+[A-Z])',
                        lambda m: m[0].replace('.', '\uE000'), text)
-    return [s.replace('\uE000', '.').strip() for s in re.split(r'(?:(?<=[.!?])|(?<=[.!?][\"”’)]))\s+(?=[A-Z0-9\"“])', protected) if s.strip()]
+    # Keep bracketed footnotes with the sentence they annotate, but do not
+    # merge the following sentence (especially a terminal WHEREFORE) into it.
+    protected = re.sub(r'([.!?]["”’)]?)(\s*(?:\[\d+\]\s*)+)(?=[A-Z"“])',
+                       lambda m: m[0] + '\uE001', protected)
+    return [s.replace('\uE000', '.').strip() for s in re.split(r'\uE001|(?:(?<=[.!?])|(?<=[.!?][\"”’)]))\s+(?=[A-Z0-9\"“])', protected) if s.strip()]
 
 
 def token_windows(ids, size, overlap=64):
@@ -85,3 +95,10 @@ def prompt(role, source, exemplars=()):
     return (f'Write one {role} paragraph for a Philippine Supreme Court case digest. '
             'Use only the target source; do not copy facts from examples. Preserve parties and legal bases.\n'
             f'{examples}\nTarget {role} source:\n{source}\n{role} summary:')
+
+
+def generator_input(role, source, exemplars=()):
+    # The frozen summarizer's documented interface is source text. Natural-
+    # language task instructions can be copied into its output in zero-shot use.
+    # Retain the thesis's explicit few-shot format when reviewed examples exist.
+    return prompt(role, source, exemplars) if exemplars else source

@@ -66,6 +66,10 @@ def main():
             lora_dropout=0.1, target_modules=args.attention_targets,
             modules_to_save=['classifier', 'pooler'] if args.train_pooler else ['classifier']))
     model.print_trainable_parameters()
+    trainable_lora = sum(p.numel() for name, p in model.named_parameters()
+                         if p.requires_grad and 'lora_' in name)
+    if not trainable_lora:
+        raise ValueError('LoRA parameters are frozen; refuse a misleading adapter-training run')
     def metrics(pred):
         y = np.argmax(pred.predictions, axis=-1)
         from sklearn.metrics import precision_recall_fscore_support
@@ -107,6 +111,7 @@ def main():
             for r, y, logits in zip(rows, labels, pred.predictions)], indent=2), encoding='utf-8')
     Path(args.output, 'training_metadata.json').write_text(json.dumps({
         'base_model': base, 'labels': LABELS, 'epochs': args.epochs, 'seed': 42,
+        'trainable_lora_parameters': trainable_lora,
         'class_weighting': 'issue_focused' if args.class_weighting == 'none' and args.issue_weight_multiplier != 1 else args.class_weighting,
         'class_weights': dict(zip(LABELS, weights)),
         'issue_oversample_factor': args.issue_oversample_factor,

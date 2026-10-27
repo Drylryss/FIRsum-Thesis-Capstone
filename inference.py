@@ -6,6 +6,8 @@ from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.responses import FileResponse
 from starlette.concurrency import run_in_threadpool
 from core import classifier_path
+from grounding import VERSION as GROUNDING_VERSION
+from delivery import PRESENTATION_VERSION
 app = FastAPI(title='FIRmSUM')
 ROOT = Path(__file__).parent
 lock = threading.Lock()
@@ -29,16 +31,19 @@ def status():
             'classifier_provisional': provisional,
             'classifier_weighting': settings.get('class_weighting', 'none'),
             'ml_dependencies_ready': all(importlib.util.find_spec(x) is not None for x in ['torch', 'transformers', 'peft']),
-            'loaded': engine is not None}
+            'loaded': engine is not None,
+            'grounding_version': GROUNDING_VERSION,
+            'presentation_version': PRESENTATION_VERSION,
+            'verification_method': 'literal_source_match'}
 
 
-def execute(text, case_id):
+def execute(text, case_id, display_markers=()):
     global engine
     with lock:
         if engine is None:
             from pipeline import FIRPipeline
             engine = FIRPipeline()
-        return engine.run(text, case_id)
+        return engine.run(text, case_id, display_markers)
 
 
 async def prepare_upload(file):
@@ -53,7 +58,11 @@ async def prepare_upload(file):
         raise HTTPException(422, 'The uploaded file is not a valid PDF.')
     try:
         from pypdf import PdfReader
-        text = '\n'.join(p.extract_text() or '' for p in PdfReader(io.BytesIO(data)).pages)
+        reader = PdfReader(io.BytesIO(data))
+        pages = [p.extract_text() or '' for p in reader.pages]
+        from footnote_display import pdf_markers
+        footnote_markers = [marker for page in reader.pages for marker in pdf_markers(page)]
+        text = '\n'.join(pages)
     except Exception as exc:
         raise HTTPException(422, 'Cannot read this PDF. Upload a readable, unencrypted PDF.') from exc
     if not text.strip():
@@ -61,8 +70,12 @@ async def prepare_upload(file):
     if len(text) > 200000:
         raise HTTPException(413, 'Decision exceeds 200,000 characters')
     from preprocessing import prepare_decision
+    from extraction_quality import audit_pages
     prepared = prepare_decision(text)
+    prepared['extraction_audit'] = audit_pages(pages, data)
+    prepared['warnings'].extend(prepared['extraction_audit']['warnings'])
     prepared['case_id'] = case_id
+    prepared['display_footnote_markers'] = footnote_markers
     return prepared
 
 
@@ -74,10 +87,14 @@ async def prepare(file: UploadFile = File(...)):
 @app.post('/api/summarize')
 async def summarize(file: UploadFile = File(...)):
     prepared = await prepare_upload(file)
+    if not prepared['extraction_audit']['summarization_allowed']:
+        raise HTTPException(422, ' '.join(prepared['extraction_audit']['warnings']))
     try:
-        result = await run_in_threadpool(execute, prepared['text'], prepared['case_id'])
+        result = await run_in_threadpool(execute, prepared['text'], prepared['case_id'], prepared['display_footnote_markers'])
         result['preprocessing'] = prepared
         result.setdefault('warnings', []).extend(prepared['warnings'])
+        from delivery import prepare_delivery
+        result['delivery'] = prepare_delivery(result)
         return result
     except (ValueError, RuntimeError, OSError, ImportError) as exc:
         raise HTTPException(503, str(exc)) from exc

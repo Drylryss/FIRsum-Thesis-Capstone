@@ -18,7 +18,8 @@ class LabelReviewTests(unittest.TestCase):
         with patch('label_review.apply_reviewed_labels', side_effect=AssertionError('Overrides must not run')):
             result = engine.run('A sentence.', 'case')
         self.assertEqual(result['sentences'], predicted)
-        self.assertEqual(result['blocks']['ISSUE'], 'A sentence.')
+        self.assertEqual(result['blocks']['ISSUE'], '')
+        self.assertEqual(result['verification']['blocks']['ISSUE']['mode'], 'withheld')
 
     def test_exact_case_only_and_model_prediction_preserved(self):
         rows = [dict(id=1, text='REVERSED and SET ASIDE.', role='ISSUE', confidence=0.98)]
@@ -39,5 +40,6 @@ class LabelReviewTests(unittest.TestCase):
         engine.classify = lambda text: self.fail('Must not overwrite reviewed labels')
         engine.generate_block = lambda role, source: (source, int(bool(source)))
         result = engine.run_tagged([dict(id=1, text='Petition granted.', role='RULING', label_source='user_review')], 'case')
-        self.assertEqual(result['blocks']['RULING'], 'Petition granted.')
+        self.assertEqual(result['sentences'][0]['role'], 'RULING')
+        self.assertEqual(result['blocks']['RULING'], '')  # No attributable terminal disposition.
         self.assertEqual(result['blocks']['ISSUE'], '')

@@ -23,8 +23,35 @@ class PreprocessingTests(unittest.TestCase):
         self.assertEqual(result['text'], raw)
         self.assertEqual(result['excluded_sections'], [])
 
+    def test_older_caption_and_concurrence_boundary(self):
+        raw = ('G.R. No. 123 May 12, 1989 A, petitioner, vs. B, respondent. '
+               'MELENCIO-HERRERA, J.: The claim concerns a contract. '
+               'WHEREFORE, the petition is granted. SO ORDERED . '
+               'Fernan, C.J., Cruz and Paras, JJ., concur. Footnotes 1 A note.')
+        prepared = prepare_decision(raw)
+        self.assertTrue(prepared['text'].startswith('The claim'))
+        self.assertTrue(prepared['text'].endswith('SO ORDERED .'))
+        self.assertNotIn('Footnotes', prepared['text'])
+
     def test_names_and_quoted_sentence_boundaries(self):
         self.assertEqual(sentences('Dr. Efren SJ. Nerva met Atty. Noe Botor (Atty. Botor). The court agreed.'),
                          ['Dr. Efren SJ. Nerva met Atty. Noe Botor (Atty. Botor).', 'The court agreed.'])
         self.assertEqual(sentences('He said "Denied." The appeal followed.'),
                          ['He said "Denied."', 'The appeal followed.'])
+
+    def test_signed_historical_quote_does_not_truncate_later_current_order(self):
+        raw = ('The earlier decision read: WHEREFORE, the petition is denied. SO ORDERED. '
+               'JUAN CRUZ Associate Justice The new petition raised a different ground. '
+               'WHEREFORE, the petition is granted. SO ORDERED. '
+               'PEDRO SANTOS Associate Justice WE CONCUR:')
+        prepared = prepare_decision(raw)
+        self.assertIn('The new petition', prepared['text'])
+        self.assertIn('petition is granted.', prepared['text'])
+
+    def test_separate_opinion_signature_is_not_used_to_extend_main_opinion(self):
+        raw = ('WHEREFORE, the petition is granted. SO ORDERED. '
+               'JUAN CRUZ Associate Justice DISSENTING OPINION '
+               'WHEREFORE, I vote to deny. SO ORDERED. PEDRO SANTOS Associate Justice')
+        prepared = prepare_decision(raw)
+        self.assertNotIn('I vote to deny', prepared['text'])
+        self.assertIn('I vote to deny', prepared['excluded_sections'][0]['text'])
